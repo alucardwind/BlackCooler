@@ -33,7 +33,20 @@ function changeURLArg(url,arg,arg_val)
 }
 
 function check_client_width(bcw) {
-    if(!GetQueryString("sm") || GetQueryString("sm") != bcw){
-        window.location.href = changeURLArg(window.location.href, 'sm', bcw)
+    let ds = 0
+    if(bcw < mobile_width){
+        ds = 1
+    }
+    else if(mobile_width <= bcw && bcw < old_middle_screen_width){
+        ds = 2
+    }
+    else if (old_middle_screen_width <= bcw && bcw <new_middle_screen_width){
+        ds = 3
+    }
+    else if (bcw >= new_middle_screen_width){
+        ds = 4
+    }
+    if(!GetQueryString("ds") || GetQueryString("ds") != ds){
+        window.location.href = changeURLArg(window.location.href, 'ds', ds)
     }
 }
