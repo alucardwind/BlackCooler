@@ -4,6 +4,7 @@
     let body_clientWidth = document.body.clientWidth;
     check_client_width(body_clientWidth);
 </script>
+<div id="page">
 <?php
 if (isset($_GET['ds'])){
     if ($_GET['ds'] == 0){
@@ -17,5 +18,6 @@ if (isset($_GET['ds'])){
     }
 }
 ?>
+</div>
 </body>
 </html>
