@@ -1,10 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑", Hei;
+    font-size: 15px;
+    color: #b6b9bb;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+}
+
 #page{
-    margin: auto;
+    margin: 20px auto 0 auto;
     width: max-content;
+    display: flow-root;
 }
 
 .col{
     float: left;
+}
+
+#title{
+    writing-mode: vertical-lr;
+}
+
+#name a{
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+    -webkit-text-stroke: 2px #b7c0c1;
+    letter-spacing: 12px;
 }
 
 #col1{

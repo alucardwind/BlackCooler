@@ -1,11 +1,13 @@
 <div id="col0" class="col">
-    <div class="name">
-        <a href="<?php echo esc_url(home_url('/')); ?>"
-           title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
-           rel="home"><?php bloginfo('name'); ?></a>
-    </div>
-    <div class="info">
-        <?php bloginfo('description'); ?>
+    <div id="title">
+        <div id="name">
+            <a href="<?php echo esc_url(home_url('/')); ?>"
+               title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
+               rel="home"><?php bloginfo('name'); ?></a>
+        </div>
+        <div id="info">
+		    <?php bloginfo('description'); ?>
+        </div>
     </div>
 </div>
 <div id="col1" class="col">

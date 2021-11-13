@@ -1,18 +1,14 @@
 <?php
-if (function_exists('register_sidebar'))
-	register_sidebar(array(
-		'id' => 'sidebar-1'
-	));
+//禁止使用顶部的管理员工具栏
+show_admin_bar(false);
 
-/**
- * Add a sidebar.
- */
-function blackhack_theme_slug_widgets_init() {
+//加入侧边栏
+function blackcooler_widgets_init() {
 	register_sidebar( array(
 		'id'            => 'sidebar-1'
 	) );
 }
-add_action( 'widgets_init', 'blackhack_theme_slug_widgets_init' );
+add_action( 'widgets_init', 'blackcooler_widgets_init' );
 
 function get_content( $name = null ) {
     $templates = array();
