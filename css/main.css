@@ -1,0 +1,21 @@
+#page{
+    margin: auto;
+    width: max-content;
+}
+
+.col{
+    float: left;
+}
+
+#col1{
+    width: 300px;
+}
+
+.con{
+    float: left;
+    width: 445px;
+}
+
+#zhiding{
+    clear: both;
+}
