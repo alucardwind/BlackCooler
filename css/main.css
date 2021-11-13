@@ -37,6 +37,30 @@ body{
     width: 300px;
 }
 
+#col2_top{
+    clear: both;
+    display: flow-root;
+}
+
+#search_form{
+    float: left;
+}
+
+#get_archives{
+    float: right;
+}
+
+#get_cats{
+    clear: both;
+    list-style: none;
+    display: flow-root;
+}
+
+#get_cats ul li{
+    float: left;
+    display: block;
+}
+
 .con{
     float: left;
     width: 445px;

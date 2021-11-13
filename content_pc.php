@@ -9,11 +9,48 @@
 		    <?php bloginfo('description'); ?>
         </div>
     </div>
+    <div id="page_bar">
+	    <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
+    </div>
 </div>
 <div id="col1" class="col">
     <?php get_sidebar() ?>
 </div>
 <div id="col2" class="col">
+    <div id="col2_top">
+        <div id="search_form">
+            <?php get_search_form()?>
+        </div>
+        <div id="get_archives">
+            <select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+            <option value=""><?php esc_attr( _e( '选择月份', 'blackcooler' ) ); ?></option>
+	        <?php
+	        $args = array(
+		        'type'				=> 'monthly',
+		        'limit'				=> '',
+		        'format'			=> 'option',
+		        'before'			=> '',
+		        'after'				=> '',
+		        'show_post_count'	=> true,
+		        'echo'				=> 1,
+		        'order'				=> 'DESC',
+		        'post_type'			=> 'post'
+	        );
+            wp_get_archives( $args );
+            ?>
+            </select>
+        </div>
+        <div id="get_cats">
+            <ul>
+	            <?php
+	            $categories=get_categories();
+	            foreach($categories as $category) {
+		            echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . $category->count . '</a> </li> ';
+	            }
+	            ?>
+            </ul>
+        </div>
+    </div>
     <?php
     //排除置顶文章显示，置顶文章将显示在最下面
     $paged = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
