@@ -1,13 +1,15 @@
+/* 全局样式 */
+
 *{
     margin: 0;
     padding: 0;
     font-family: "微软雅黑", Hei;
-    font-size: 15px;
     color: #b6b9bb;
     text-decoration: none;
 }
 
 body{
+    font-size: 15px;
     background-color: black;
 }
 
@@ -21,6 +23,8 @@ body{
     float: left;
 }
 
+/* 标题区域样式 */
+
 #title{
     writing-mode: vertical-lr;
 }
@@ -33,9 +37,36 @@ body{
     letter-spacing: 12px;
 }
 
+/* 侧边栏样式 */
+
 #col1{
-    width: 300px;
+    width: 270px;
 }
+
+#sidebar ul li{
+    display: block;
+}
+
+#sidebar ul li ul, #sidebar ul li ol{
+    border-left: 4px solid #a09faa;
+}
+
+#sidebar ul li ul li{
+    display: block;
+}
+
+#sidebar h2{
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to bottom, #02545f, #05949a 52%, #02545f 81%, #030e17 100%);
+    border-left: 4px solid #bdde2d;
+}
+
+/* 日志区域样式 */
 
 #col2_top{
     clear: both;
@@ -63,7 +94,7 @@ body{
 
 .con{
     float: left;
-    width: 445px;
+    width: 400px;
 }
 
 #zhiding{
