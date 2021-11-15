@@ -25,21 +25,28 @@ body{
 }
 
 /* 标题区域样式 */
+
 #col0{
     width: 150px;
     padding-right: 5px;
+    overflow: hidden;
 }
 
 #title{
     writing-mode: vertical-lr;
-    float: right;
     border: 1px solid #344349;
-    padding: 30px 20px 30px 10px;
+    padding: 0px 20px 30px 10px;
+    position: relative;
+    float: right;
 }
 
 #name{
+    width: 60px;
+    padding-top: 30px;
     padding-left: 20px;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) ,rgba(18, 53, 68, 0.64) 10%, rgba(18, 53, 68, 0));
 }
+
 #name a{
     color: black;
     font-size: 3em;
@@ -53,6 +60,7 @@ body{
     line-height: 2em;
     letter-spacing: 1px;
     text-align: center;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 25%,rgba(18, 53, 68, 0.64) 35%, rgba(18, 53, 68, 0));
 }
 
 /* 侧边栏样式 */

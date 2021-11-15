@@ -1,5 +1,5 @@
 <script>
-    sidebar_decorate();
+    show_decorate();
 </script>
 
 <?php
