@@ -17,6 +17,7 @@ if (isset($_GET['ds'])){
         get_content('pc');
     }
 }
+get_footer();
 ?>
 </div>
 </body>

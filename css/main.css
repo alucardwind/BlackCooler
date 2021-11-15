@@ -3,12 +3,13 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "微软雅黑", Hei;
+    font-family: "微软雅黑", "Microsoft YaHei", "Segoe UI", sans-serif;
     color: #b6b9bb;
     text-decoration: none;
 }
 
 body{
+    --sidebar_width: 250px;
     font-size: 15px;
     background-color: black;
 }
@@ -24,23 +25,46 @@ body{
 }
 
 /* 标题区域样式 */
+#col0{
+    width: 150px;
+    padding-right: 5px;
+}
 
 #title{
     writing-mode: vertical-lr;
+    float: right;
+    border: 1px solid #344349;
+    padding: 30px 20px 30px 10px;
 }
 
+#name{
+    padding-left: 20px;
+}
 #name a{
     color: black;
     font-size: 3em;
     font-weight: bolder;
     -webkit-text-stroke: 2px #b7c0c1;
     letter-spacing: 12px;
+    vertical-align: text-bottom;
+}
+
+#info{
+    line-height: 2em;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 /* 侧边栏样式 */
 
 #col1{
-    width: 270px;
+    width: var(--sidebar_width);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#sidebar ul{
+    border-bottom: 1px solid #344349;
 }
 
 #sidebar ul li{
@@ -49,10 +73,16 @@ body{
 
 #sidebar ul li ul, #sidebar ul li ol{
     border-left: 4px solid #a09faa;
+    border-right: 1px solid #344349;
+    padding-left: 10px;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.5), rgba(18, 53, 68, 0) 65%, rgba(18, 53, 68, 0) 80%, rgba(18, 53, 68, 0.5) 100%);
 }
 
-#sidebar ul li ul li{
+#sidebar ul li ul li, #sidebar ul li ol li{
+    text-align: center;
     display: block;
+    line-height: 2em;
+    width: calc(var(--sidebar_width) - 15px);
 }
 
 #sidebar h2{
