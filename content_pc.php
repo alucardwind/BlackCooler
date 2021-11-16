@@ -22,6 +22,7 @@
             <?php get_search_form()?>
         </div>
         <div id="get_archives">
+            文章归档
             <select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
             <option value=""><?php esc_attr( _e( '选择月份', 'blackcooler' ) ); ?></option>
 	        <?php
@@ -45,7 +46,7 @@
 	            <?php
 	            $categories=get_categories();
 	            foreach($categories as $category) {
-		            echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . $category->count . '</a> </li> ';
+		            echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . "&nbsp;" . $category->count . '</a> </li> ';
 	            }
 	            ?>
             </ul>
@@ -62,18 +63,22 @@
     );
     query_posts( $args );
     $bc_post_num = 0;
+    $con_num = 0;
     if (have_posts()) :
         while (have_posts()) : the_post();
             if ($bc_post_num == 0){
-                echo "<div class='con'>";
+	            $con_num++;
+                echo "<div id='con" . $con_num . "' class='con'>";
             }
             if ($_GET['ds'] == 4){
                 if ($bc_post_num == 2 || $bc_post_num == 4){
-                    echo "<div class='con'>";
+	                $con_num++;
+                    echo "<div id='con" . $con_num . "' class='con'>";
                 }
             }
             elseif ($_GET['ds'] == 3 && $bc_post_num == 3){
-                echo "<div class='con'>";
+	            $con_num++;
+                echo "<div id='con" . $con_num . "' class='con'>";
             }
             get_content();
             if ($bc_post_num == 5){

@@ -5,14 +5,17 @@ function creat_canvas(class_name, width, height) {
     canvas.className = class_name;
     $(canvas).css("width", width);
     $(canvas).css("height", height);
-    $(canvas).css("z-index", 1);
+    $(canvas).css("z-index", -1);
     return canvas;
 }
 
 function show_decorate() {
+    change_zhiding();
     sidebar_decorate();
     title_decorate();
-    pagebar_decorate();
+    cats_decorate();
+    postswords_decorate();
+    posttitle_decorate();
 }
 
 function sidebar_decorate() {
@@ -143,7 +146,7 @@ function title_decorate() {
     title.prepend(canvas);
 }
 
-function pagebar_decorate() {
+function cats_decorate() {
     let li_num = $("#get_cats ul li").length;
     let ul_padding = $("#get_cats ul").css("padding-left");
     ul_padding = parseInt(ul_padding.replace("px", ""));
@@ -161,7 +164,7 @@ function pagebar_decorate() {
     dat_tx.beginPath();
     dat_tx.scale(2,2);
     dat_tx.strokeStyle = "#ffffff";
-    dat_tx.lineWidth = 3;
+    dat_tx.lineWidth = 2;
     dat_tx.globalAlpha = 0.5;
     dat_tx.moveTo(1, 2);
     dat_tx.lineTo(20, 2);
@@ -177,5 +180,155 @@ function pagebar_decorate() {
     dat_tx.lineTo(2, getcats_height - 2);
     dat_tx.lineTo(2, getcats_height - 20);
     dat_tx.stroke();
+    dat_tx.beginPath();
+    dat_tx.strokeStyle = "#bdde2d";
+    dat_tx.globalAlpha = 1;
+    dat_tx.setLineDash([15, 15]);
+    let x = 25;
+    dat_tx.moveTo(x, 2);
+    dat_tx.lineTo(320, 2);
+    x = 20;
+    dat_tx.moveTo(x, 4);
+    dat_tx.lineTo(320, 4);
+    dat_tx.stroke();
     $('#get_cats').prepend(canvas);
+}
+
+function postswords_decorate() {
+    let posts = $('.post_words');
+    let post_width = 0;
+    let post_height = 0;
+    posts.each(function () {
+        post_width = $(this).outerWidth();
+        post_height = $(this).outerHeight();
+        let canvas = creat_canvas('post_cover', post_width, post_height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.beginPath();
+        dat_tx.scale(2,2);
+        dat_tx.strokeStyle = "#ffffff";
+        dat_tx.lineWidth = 1;
+        dat_tx.globalAlpha = 0.5;
+        dat_tx.moveTo(1, 1);
+        dat_tx.lineTo(60, 1);
+        dat_tx.lineTo(65, 7);
+        dat_tx.lineTo(105, 7);
+        dat_tx.lineTo(110, 1);
+        dat_tx.lineTo(post_width, 1);
+        for (let i = 0; i < 7; i++) {
+            let x = 40 + i * 25
+            dat_tx.rect(x, post_height - 18, 20, 5);
+        }
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.lineWidth = 2;
+        dat_tx.moveTo(0, 1);
+        dat_tx.lineTo(20, 1);
+        dat_tx.moveTo(1, 1);
+        dat_tx.lineTo(1, 20);
+        dat_tx.moveTo(post_width - 20, 1);
+        dat_tx.lineTo(post_width - 1, 1);
+        dat_tx.lineTo(post_width - 1, 20);
+        dat_tx.moveTo(post_width - 1, post_height - 20);
+        dat_tx.lineTo(post_width - 1, post_height - 1);
+        dat_tx.lineTo(post_width - 20, post_height - 1);
+        dat_tx.moveTo(20, post_height - 1);
+        dat_tx.lineTo(1, post_height - 1);
+        dat_tx.lineTo(1, post_height - 20);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.globalAlpha = 1;
+        dat_tx.setLineDash([15, 15]);
+        let x = post_width - 25;
+        dat_tx.moveTo(x, 2);
+        dat_tx.lineTo(post_width - 220, 2);
+        x = post_width - 20;
+        dat_tx.moveTo(x, 4);
+        dat_tx.lineTo(post_width - 220, 4);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.setLineDash([]);
+        dat_tx.lineWidth = 4;
+        dat_tx.strokeStyle = "#ffffff";
+        dat_tx.moveTo(15, 15);
+        dat_tx.lineTo(30, 15);
+        dat_tx.moveTo(post_width - 30, 15);
+        dat_tx.lineTo(post_width - 15, 15);
+        dat_tx.lineTo(post_width - 15, 30);
+        dat_tx.moveTo(post_width - 15, post_height - 30);
+        dat_tx.lineTo(post_width - 15, post_height - 15);
+        dat_tx.lineTo(post_width - 30, post_height - 15);
+        dat_tx.moveTo(30, post_height - 15);
+        dat_tx.lineTo(15, post_height - 15);
+        dat_tx.lineTo(15, post_height - 30);
+        dat_tx.moveTo(15, 30);
+        dat_tx.lineTo(15, 13);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.lineWidth = 2;
+        dat_tx.setLineDash([2, 4]);
+        dat_tx.moveTo(15, 50);
+        dat_tx.lineTo(15, post_height - 50);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.setLineDash([]);
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.moveTo(40, 1);
+        dat_tx.lineTo(40, 15);
+        dat_tx.moveTo(post_width - 40, post_height - 1);
+        dat_tx.lineTo(post_width - 40, post_height - 15);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.strokeStyle = "#ffffff";
+        dat_tx.globalAlpha = 0.5;
+        dat_tx.moveTo(40, 15);
+        dat_tx.lineTo(40, 40);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+}
+
+function posttitle_decorate() {
+    let posttitle_width = 0;
+    let posttitle_height = 0;
+    $('.post_title').each(function () {
+        posttitle_width = $(this).outerWidth();
+        posttitle_height = $(this).outerHeight();
+        let canvas = creat_canvas('title_bottom', posttitle_width, posttitle_height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.beginPath();
+        dat_tx.scale(2,2);
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.lineWidth = 2;
+        dat_tx.moveTo(1, posttitle_height - 1);
+        dat_tx.lineTo(10, posttitle_height - 4);
+        dat_tx.lineTo(1, posttitle_height - 7);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.strokeStyle = "#ffffff";
+        dat_tx.lineWidth = 1;
+        dat_tx.globalAlpha = 0.5;
+        dat_tx.moveTo(15, posttitle_height - 4);
+        dat_tx.lineTo(posttitle_width, posttitle_height - 4);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+}
+
+function change_zhiding() {
+    let zhiding = $('#zhiding');
+    let con_width = $('.con').width();
+    if (GetQueryString("ds") == 2) {
+        zhiding.width(con_width);
+    }
+    else if (GetQueryString("ds") == 3) {
+        zhiding.width(con_width * 2);
+    }
+    else if (GetQueryString("ds") == 4) {
+        zhiding.width(con_width * 3);
+    }
 }

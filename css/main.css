@@ -8,8 +8,14 @@
     text-decoration: none;
 }
 
+a{
+    cursor: pointer;
+    z-index: 2;
+}
+
 body{
     --sidebar_width: 250px;
+    --posttitle_width: 230px;
     font-size: 15px;
     background-color: black;
 }
@@ -113,12 +119,11 @@ body{
 #col2_top{
     clear: both;
     display: flow-root;
-    padding-bottom: 5px;
 }
 
 #search_form{
     float: left;
-    border: 2px solid #344349;
+    border: 1px solid #344349;
 }
 
 #s{
@@ -139,9 +144,9 @@ body{
 }
 
 #get_archives select{
-    height: 33px;
+    height: 35px;
     width: 200px;
-    border: 2px solid #344349;
+    border: 1px solid #344349;
     background: none;
     color: white;
 }
@@ -156,7 +161,7 @@ body{
 
 #get_cats ul{
     display: flow-root;
-    border: 2px solid #344349;
+    border: 1px solid #344349;
     padding-left: 20px;
     background-image: linear-gradient(to right, rgba(18, 53, 68, 0) ,rgba(18, 53, 68, 0.8) 30%, rgba(18, 53, 68, 0));
 }
@@ -170,9 +175,69 @@ body{
 .con{
     float: left;
     width: 400px;
-    padding: 5px;
+}
+
+#con1{
+    padding-right: 5px;
+}
+
+#con2{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#con3{
+    padding-left: 5px;
+}
+
+.post_words{
+    margin-top: 10px;
+    border-bottom: 1px solid #344349;
+    border-left: 1px solid #344349;
+    border-right: 1px solid #344349;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 25%,rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
+    position: relative;
+    padding: 20px 15px 20px 40px;
+}
+
+.post_info{
+    float: left;
+    padding: 0 10px 0 10px;
+    border-right: 2px solid #bdde2d;
+}
+
+.post_title{
+    float: right;
+    font-size: 1.2em;
+    width: var(--posttitle_width);
+    padding-bottom: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.post_title a{
+    color: #19a2a9;
+}
+
+.post_content{
+    clear: both;
+    padding-top: 20px;
+    text-indent: 2em;
+    line-height: 1.8em;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.post_content p{
+    padding-bottom: 1em;
+}
+
+.sign{
+    text-align: right;
+    padding-bottom: 1em;
 }
 
 #zhiding{
     clear: both;
+    float: left;
 }
