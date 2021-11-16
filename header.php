@@ -12,6 +12,7 @@ session_start();
 
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/main.css" type="text/css" media="screen"/>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/control.js"></script>
     <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/decorate.js"></script>
     <?php wp_head(); ?>

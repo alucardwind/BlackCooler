@@ -12,6 +12,7 @@ function creat_canvas(class_name, width, height) {
 function show_decorate() {
     sidebar_decorate();
     title_decorate();
+    pagebar_decorate();
 }
 
 function sidebar_decorate() {
@@ -119,7 +120,7 @@ function title_decorate() {
     dat_tx.lineWidth = 1;
     let x = title_width - 32;
     y = title_height - 55;
-    let line= 15;
+    let line = 15;
     dat_tx.moveTo(x, y);
     dat_tx.lineTo(x + 4, y + 4);
     dat_tx.moveTo(x + 4 + line, y + 4 + line);
@@ -140,4 +141,41 @@ function title_decorate() {
     dat_tx.lineTo(x, y + 3 + line);
     dat_tx.stroke();
     title.prepend(canvas);
+}
+
+function pagebar_decorate() {
+    let li_num = $("#get_cats ul li").length;
+    let ul_padding = $("#get_cats ul").css("padding-left");
+    ul_padding = parseInt(ul_padding.replace("px", ""));
+    let ul_width = $("#get_cats ul").width();
+    let li_width = Math.floor((ul_width - ul_padding) / li_num);
+    $("#get_cats ul li").each(function () {
+        $(this).width(li_width);
+    });
+    let getcats_width = $('#get_cats').outerWidth();
+    let getcats_height = $('#get_cats').outerHeight() - parseInt($('#get_cats').css("padding-top").replace("px", ""));
+    let canvas = creat_canvas("cat_cover", getcats_width, getcats_height);
+    $(canvas).css("position", "absolute");
+    $(canvas).css("bottom", "0px");
+    let dat_tx = canvas.getContext("2d");
+    dat_tx.beginPath();
+    dat_tx.scale(2,2);
+    dat_tx.strokeStyle = "#ffffff";
+    dat_tx.lineWidth = 3;
+    dat_tx.globalAlpha = 0.5;
+    dat_tx.moveTo(1, 2);
+    dat_tx.lineTo(20, 2);
+    dat_tx.moveTo(2, 1);
+    dat_tx.lineTo(2, 20);
+    dat_tx.moveTo(getcats_width - 20, 2);
+    dat_tx.lineTo(getcats_width - 2, 2);
+    dat_tx.lineTo(getcats_width - 2, 20);
+    dat_tx.moveTo(getcats_width - 2, getcats_height - 20);
+    dat_tx.lineTo(getcats_width - 2, getcats_height - 2);
+    dat_tx.lineTo(getcats_width - 20, getcats_height - 2);
+    dat_tx.moveTo(20, getcats_height - 2);
+    dat_tx.lineTo(2, getcats_height - 2);
+    dat_tx.lineTo(2, getcats_height - 20);
+    dat_tx.stroke();
+    $('#get_cats').prepend(canvas);
 }
