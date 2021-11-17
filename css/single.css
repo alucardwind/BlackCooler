@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body{
+    /*--max_width: 1640px;*/
+    /*--min_width: 825px*/
+}
+
+.row{
+    clear: both;
+    display: flow-root;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* 标题栏 */
+
+.row #title{
+    padding: 10px 0 20px 0;
+    border: 1px solid #344349;
+    position: relative;
+    float: left;
+}
+
+.row #name{
+    padding: 20px 40px 0 40px;
+    background-image: linear-gradient(to right, rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.64) 60%, rgba(18, 53, 68, 0.64) 90%, rgba(18, 53, 68, 0));
+}
+
+.row #name a{
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+    -webkit-text-stroke: 2px #b7c0c1;
+    letter-spacing: 3px;
+}
+
+.row #info{
+    text-align: center;
+    padding: 20px 0 10px 0;
+    background-image: linear-gradient(to right, rgba(18, 53, 68, 0) 10%, rgba(18, 53, 68, 0.64) 20%, rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
+}

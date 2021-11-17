@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* 全局样式 */
 
 *{
@@ -14,6 +16,7 @@ a{
 }
 
 body{
+    --col0_width: 150px;
     --sidebar_width: 250px;
     --posttitle_width: 230px;
     font-size: 15px;
@@ -21,7 +24,7 @@ body{
 }
 
 #page{
-    margin: 20px auto 0 auto;
+    margin: 20px auto 20px auto;
     width: max-content;
     display: flow-root;
 }
@@ -33,12 +36,12 @@ body{
 /* 标题区域样式 */
 
 #col0{
-    width: 150px;
+    width: var(--col0_width);
     padding-right: 5px;
     overflow: hidden;
 }
 
-#title{
+.col #title{
     writing-mode: vertical-lr;
     border: 1px solid #344349;
     padding: 0px 20px 30px 10px;
@@ -46,14 +49,14 @@ body{
     float: right;
 }
 
-#name{
+.col #name{
     width: 60px;
     padding-top: 30px;
     padding-left: 20px;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) ,rgba(18, 53, 68, 0.64) 10%, rgba(18, 53, 68, 0));
 }
 
-#name a{
+.col #name a{
     color: black;
     font-size: 3em;
     font-weight: bolder;
@@ -62,11 +65,29 @@ body{
     vertical-align: text-bottom;
 }
 
-#info{
+.col #info{
     line-height: 2em;
     letter-spacing: 1px;
     text-align: center;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 25%,rgba(18, 53, 68, 0.64) 35%, rgba(18, 53, 68, 0));
+}
+
+.col #page_bar{
+    padding-top: 15px;
+    float: right;
+}
+
+.col #page_bar ul li{
+    box-sizing: border-box;
+    float: right;
+    width: var(--col0_width);;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 5px;
+    border: 1px solid #344349;
+    border-left: 4px solid #bdde2d;
+    background-image: linear-gradient(to right, rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.2) 10%, rgba(18, 53, 68, 0.5) 50%, rgba(18, 53, 68, 0));
 }
 
 /* 侧边栏样式 */
@@ -77,29 +98,29 @@ body{
     padding-right: 5px;
 }
 
-#sidebar ul{
+.col #sidebar ul{
     border-bottom: 1px solid #344349;
 }
 
-#sidebar ul li{
+.col #sidebar ul li{
     display: block;
 }
 
-#sidebar ul li ul, #sidebar ul li ol{
+.col #sidebar ul li ul, .col #sidebar ul li ol{
     border-left: 4px solid #a09faa;
     border-right: 1px solid #344349;
     padding-left: 10px;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.5), rgba(18, 53, 68, 0) 65%, rgba(18, 53, 68, 0) 80%, rgba(18, 53, 68, 0.5) 100%);
 }
 
-#sidebar ul li ul li, #sidebar ul li ol li{
+.col #sidebar ul li ul li, .col #sidebar ul li ol li{
     text-align: center;
     display: block;
     line-height: 2em;
     width: calc(var(--sidebar_width) - 15px);
 }
 
-#sidebar h2{
+.col #sidebar h2{
     color: white;
     font-size: 1.1em;
     font-weight: bold;
@@ -116,34 +137,34 @@ body{
     padding-left: 5px;
 }
 
-#col2_top{
+.col #col2_top{
     clear: both;
     display: flow-root;
 }
 
-#search_form{
+.col #search_form{
     float: left;
     border: 1px solid #344349;
 }
 
-#s{
+.col #s{
     border: none;
     line-height: 29px;
     background: none;
 }
 
-#searchsubmit{
+.col #searchsubmit{
     border: none;
     height: 33px;
     width: 33px;
     background: none;
 }
 
-#get_archives{
+.col #get_archives{
     float: right;
 }
 
-#get_archives select{
+.col #get_archives select{
     height: 35px;
     width: 200px;
     border: 1px solid #344349;
@@ -151,7 +172,7 @@ body{
     color: white;
 }
 
-#get_cats{
+.col #get_cats{
     padding-top: 10px;
     clear: both;
     list-style: none;
@@ -159,38 +180,38 @@ body{
     position: relative;
 }
 
-#get_cats ul{
+.col #get_cats ul{
     display: flow-root;
     border: 1px solid #344349;
     padding-left: 20px;
     background-image: linear-gradient(to right, rgba(18, 53, 68, 0) ,rgba(18, 53, 68, 0.8) 30%, rgba(18, 53, 68, 0));
 }
 
-#get_cats ul li{
+.col #get_cats ul li{
     float: left;
     display: block;
     line-height: 50px;
 }
 
-.con{
+.col .con{
     float: left;
     width: 400px;
 }
 
-#con1{
+.col #con1{
     padding-right: 5px;
 }
 
-#con2{
+.col #con2{
     padding-left: 5px;
     padding-right: 5px;
 }
 
-#con3{
+.col #con3{
     padding-left: 5px;
 }
 
-.post_words{
+.col .post_words{
     margin-top: 10px;
     border-bottom: 1px solid #344349;
     border-left: 1px solid #344349;
@@ -200,13 +221,13 @@ body{
     padding: 20px 15px 20px 40px;
 }
 
-.post_info{
+.col .post_info{
     float: left;
     padding: 0 10px 0 10px;
     border-right: 2px solid #bdde2d;
 }
 
-.post_title{
+.col .post_title{
     float: right;
     font-size: 1.2em;
     width: var(--posttitle_width);
@@ -215,11 +236,11 @@ body{
     position: relative;
 }
 
-.post_title a{
+.col .post_title a{
     color: #19a2a9;
 }
 
-.post_content{
+.col .post_content{
     clear: both;
     padding-top: 20px;
     text-indent: 2em;
@@ -228,16 +249,16 @@ body{
     overflow-wrap: break-word;
 }
 
-.post_content p{
+.col .post_content p{
     padding-bottom: 1em;
 }
 
-.sign{
+.col .sign{
     text-align: right;
     padding-bottom: 1em;
 }
 
-#zhiding{
+.col #zhiding{
     clear: both;
     float: left;
 }

@@ -19,7 +19,7 @@ function show_decorate() {
 }
 
 function sidebar_decorate() {
-    $('#sidebar ul li ul, #sidebar ul li ol').each(function () {
+    $('.col #sidebar ul li ul, .col #sidebar ul li ol').each(function () {
         if ($(this).height() >= 80){
             let can = creat_canvas("sidebar_right", 10, 80);
             $(can).css("float", "right");
@@ -45,7 +45,7 @@ function sidebar_decorate() {
 }
 
 function title_decorate() {
-    let title = $("#title");
+    let title = $(".col #title");
     let title_width = title.outerWidth();
     let title_height = title.outerHeight();
     let canvas = creat_canvas("title_cover", title_width, title_height);
@@ -147,16 +147,16 @@ function title_decorate() {
 }
 
 function cats_decorate() {
-    let li_num = $("#get_cats ul li").length;
-    let ul_padding = $("#get_cats ul").css("padding-left");
+    let li_num = $(".col #get_cats ul li").length;
+    let ul_padding = $(".col #get_cats ul").css("padding-left");
     ul_padding = parseInt(ul_padding.replace("px", ""));
-    let ul_width = $("#get_cats ul").width();
+    let ul_width = $(".col #get_cats ul").width();
     let li_width = Math.floor((ul_width - ul_padding) / li_num);
-    $("#get_cats ul li").each(function () {
+    $(".col #get_cats ul li").each(function () {
         $(this).width(li_width);
     });
-    let getcats_width = $('#get_cats').outerWidth();
-    let getcats_height = $('#get_cats').outerHeight() - parseInt($('#get_cats').css("padding-top").replace("px", ""));
+    let getcats_width = $('.col #get_cats').outerWidth();
+    let getcats_height = $('.col #get_cats').outerHeight() - parseInt($('.col #get_cats').css("padding-top").replace("px", ""));
     let canvas = creat_canvas("cat_cover", getcats_width, getcats_height);
     $(canvas).css("position", "absolute");
     $(canvas).css("bottom", "0px");
@@ -195,7 +195,7 @@ function cats_decorate() {
 }
 
 function postswords_decorate() {
-    let posts = $('.post_words');
+    let posts = $('.col .post_words');
     let post_width = 0;
     let post_height = 0;
     posts.each(function () {
@@ -293,7 +293,7 @@ function postswords_decorate() {
 function posttitle_decorate() {
     let posttitle_width = 0;
     let posttitle_height = 0;
-    $('.post_title').each(function () {
+    $('.col .post_title').each(function () {
         posttitle_width = $(this).outerWidth();
         posttitle_height = $(this).outerHeight();
         let canvas = creat_canvas('title_bottom', posttitle_width, posttitle_height);
@@ -320,15 +320,19 @@ function posttitle_decorate() {
 }
 
 function change_zhiding() {
-    let zhiding = $('#zhiding');
-    let con_width = $('.con').width();
+    let zhiding = $('.col #zhiding');
+    let con_width = $('.col .con').width();
     if (GetQueryString("ds") == 2) {
         zhiding.width(con_width);
     }
     else if (GetQueryString("ds") == 3) {
-        zhiding.width(con_width * 2);
+        zhiding.width(con_width * 2 + 10);
     }
     else if (GetQueryString("ds") == 4) {
-        zhiding.width(con_width * 3);
+        zhiding.width(con_width * 3 + 20);
     }
+}
+
+function show_single_decorate() {
+
 }

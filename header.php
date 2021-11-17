@@ -11,6 +11,7 @@ session_start();
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
 
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/main.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/single.css" type="text/css" media="screen"/>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/control.js"></script>

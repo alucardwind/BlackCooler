@@ -19,3 +19,13 @@ function get_content( $name = null ) {
     $templates[] = 'content.php';
     locate_template( $templates, true, false);
 }
+
+function get_single( $name = null ) {
+    $templates = array();
+    $name      = (string) $name;
+    if ( '' !== $name ) {
+        $templates[] = "single_{$name}.php";
+    }
+//    $templates[] = 'content.php';
+    locate_template( $templates, true, false);
+}
