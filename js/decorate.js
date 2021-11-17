@@ -9,6 +9,32 @@ function creat_canvas(class_name, width, height) {
     return canvas;
 }
 
+function canvas_rect(dat_tx, width, height, linewidth, color, alpha, length) {
+    dat_tx.beginPath();
+    dat_tx.strokeStyle = color;
+    dat_tx.lineWidth = linewidth;
+    dat_tx.globalAlpha = alpha;
+    dat_tx.lineCap="round";
+    dat_tx.lineJoin="round";
+    let start = Math.round(linewidth / 2);
+    width = width - 2;
+    height = height - 2;
+    dat_tx.moveTo(0, start);
+    dat_tx.lineTo(length, start);
+    dat_tx.moveTo(width - length, start)
+    dat_tx.lineTo(width - start, start);
+    dat_tx.lineTo(width - start, length);
+    dat_tx.moveTo(width - start, height - length);
+    dat_tx.lineTo(width - start, height - start);
+    dat_tx.lineTo(width - length, height - start);
+    dat_tx.moveTo(length, height - start);
+    dat_tx.lineTo(start, height - start);
+    dat_tx.lineTo(start, height - length);
+    dat_tx.moveTo(start, length);
+    dat_tx.lineTo(start, 0);
+    dat_tx.stroke();
+}
+
 function show_decorate() {
     change_zhiding();
     sidebar_decorate();
@@ -334,5 +360,89 @@ function change_zhiding() {
 }
 
 function show_single_decorate() {
+    single_title_cover();
+}
 
+function single_title_cover() {
+    let title = $('.row #title');
+    let title_width = title.outerWidth();
+    let title_height = title.outerHeight();
+    let canvas = creat_canvas("single_title_cover", title_width, title_height);
+    $(canvas).css("position", "absolute");
+    $(canvas).css("inset", "0px");
+    let dat_tx = canvas.getContext("2d");
+    dat_tx.scale(2,2);
+    canvas_rect(dat_tx, title_width, title_height, 2, "#bdde2d", 1, 20);
+    let x = 60;
+    if (title_width > 300) {
+        dat_tx.beginPath();
+        dat_tx.setLineDash([1, 4]);
+        dat_tx.moveTo(x, 1);
+        for (let i = 0; i < 8; i++) {
+            x += 25;
+            dat_tx.lineTo(x, 1);
+            x += 10;
+            dat_tx.moveTo(x, 1);
+        }
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.setLineDash([]);
+        dat_tx.lineWidth = 1;
+        let gra = dat_tx.createLinearGradient(40, 1, x, 1);
+        gra.addColorStop(0, '#bdde2d');
+        gra.addColorStop(1, '#344349');
+        dat_tx.moveTo(40, 1);
+        dat_tx.lineTo(x, 1);
+        dat_tx.strokeStyle = gra;
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.setLineDash([1, 4]);
+        x = title_width - 30;
+        dat_tx.moveTo(x, title_height - 3);
+        for (let i = 0; i < 8; i++) {
+            x -= 25;
+            dat_tx.lineTo(x, title_height - 3);
+            x -= 10;
+            dat_tx.moveTo(x, title_height - 3);
+        }
+        dat_tx.lineWidth = 2;
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.setLineDash([]);
+        dat_tx.lineWidth = 1;
+        gra = dat_tx.createLinearGradient(x, title_height - 1, title_width - 25, title_height - 1);
+        gra.addColorStop(0, '#bdde2d');
+        gra.addColorStop(1, '#344349');
+        dat_tx.moveTo(x, title_height - 1);
+        dat_tx.lineTo(title_width - 25, title_height - 1);
+        dat_tx.strokeStyle = gra;
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.lineWidth = 1;
+        x = 32;
+        let y = title_height - 60;
+        let line = 15;
+        dat_tx.moveTo(x, y);
+        dat_tx.lineTo(x + 4, y + 4);
+        dat_tx.moveTo(x + 4 + line, y + 4 + line);
+        dat_tx.lineTo(x + 8 + line, y + 8 + line);
+        dat_tx.lineTo(x + 4 + line, y + 12 + line);
+        dat_tx.moveTo(x + 4, y + 12 + line * 2);
+        dat_tx.lineTo(x, y + 16 + line * 2);
+        dat_tx.moveTo(x, y);
+        dat_tx.lineTo(x - 4, y + 4);
+        dat_tx.moveTo(x - 4 - line, y + 4 + line);
+        dat_tx.lineTo(x - 8 - line, y + 8 + line);
+        dat_tx.lineTo(x - 4 - line, y + 12 + line);
+        dat_tx.moveTo(x - 4, y + 12 + line * 2);
+        dat_tx.lineTo(x, y + 16 + line * 2);
+        dat_tx.moveTo(x - 5, y + 8 + line);
+        dat_tx.lineTo(x + 5, y + 8 + line);
+        dat_tx.moveTo(x, y + 8 + line);
+        dat_tx.lineTo(x, y + 3 + line);
+        dat_tx.stroke();
+    }
+    title.prepend(canvas);
 }

@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-body{
-    /*--max_width: 1640px;*/
-    /*--min_width: 825px*/
-}
-
 .row{
     clear: both;
     display: flow-root;
@@ -13,6 +8,10 @@ body{
 }
 
 /* 标题栏 */
+
+#single_row0{
+    padding-bottom: 5px;
+}
 
 .row #title{
     padding: 10px 0 20px 0;
@@ -38,4 +37,17 @@ body{
     text-align: center;
     padding: 20px 0 10px 0;
     background-image: linear-gradient(to right, rgba(18, 53, 68, 0) 10%, rgba(18, 53, 68, 0.64) 20%, rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
+}
+
+/* 日志栏 */
+
+#single_row1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.row .post_words{
+    border: 1px solid #344349;
+    border-top: 0;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.64) 10%, rgba(18, 53, 68, 0));
 }
