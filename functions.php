@@ -29,3 +29,27 @@ function get_single( $name = null ) {
 //    $templates[] = 'content.php';
     locate_template( $templates, true, false);
 }
+
+//更改comment的input顺序
+function change_fields_order( $fields ) {
+	$comment_field = $fields['comment'];
+	$author_field = $fields['author'];
+	$email_field = $fields['email'];
+	$url_field = $fields['url'];
+	$cookies_field = $fields['cookies'];
+	unset( $fields['comment'] );
+	unset( $fields['author'] );
+	unset( $fields['email'] );
+	unset( $fields['url'] );
+	unset( $fields['cookies'] );
+	// the order of fields is the order below, change it as needed:
+	$fields['author'] = "<div class='call_name'>" . $author_field;
+	$fields['email'] = $email_field;
+	$fields['url'] = $url_field;
+	$fields['cookies'] = $cookies_field . "</div>";
+	//下面增加的div的结尾标识在comments.php中
+	$fields['comment'] = "<div class='call_text'>" . $comment_field;
+	// done ordering, now return the fields:
+	return $fields;
+}
+add_filter( 'comment_form_fields', 'change_fields_order' );

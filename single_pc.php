@@ -15,7 +15,7 @@
         <div class="post_words">
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
                 <div class="post_info">
-                    <?php the_category(' '); ?><?php edit_post_link(__('编辑', 'blackhack'), ''); ?>
+                    <?php the_category(' '); ?><?php edit_post_link(__('编辑', 'blackcooler'), ''); ?>
                 </div>
                 <div class="post_title">
                     <a href="<?php the_permalink() ?>" rel="bookmark"
@@ -30,6 +30,9 @@
                     <?php the_author(); ?></strong>创作于<?php the_time('Y.m.jS') ?>
                 </div>
             </div>
+        </div>
+        <div class="post_comments">
+		    <?php comments_template('/comments.php', true); ?>
         </div>
     <?php endwhile; ?>
 </div>
