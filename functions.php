@@ -40,6 +40,16 @@ function get_single_page( $name ) {
 	locate_template( $templates, true, false);
 }
 
+function get_index( $name = null ) {
+	$templates = array();
+	$name      = (string) $name;
+	if ( '' !== $name ) {
+		$templates[] = "index_{$name}.php";
+	}
+    $templates[] = 'index.php';
+	locate_template( $templates, true, false);
+}
+
 //更改comment的input顺序
 function change_fields_order( $fields ) {
 	$comment_field = $fields['comment'];
