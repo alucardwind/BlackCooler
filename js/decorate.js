@@ -648,5 +648,26 @@ function single_comments_cover() {
         y += 20;
     }
     dat_tx.stroke();
+    dat_tx.beginPath();
+    dat_tx.strokeStyle = "#bdde2d";
+    dat_tx.lineWidth = 1;
+    x = post_width - 95;
+    y = post_height - 76;
+    let line = 28;
+    dat_tx.moveTo(x, y);
+    dat_tx.lineTo(x + 4, y + 4);
+    dat_tx.moveTo(x + 4 + line, y + 4 + line);
+    dat_tx.lineTo(x + 8 + line, y + 8 + line);
+    dat_tx.lineTo(x + 4 + line, y + 12 + line);
+    dat_tx.moveTo(x + 4, y + 12 + line * 2);
+    dat_tx.lineTo(x, y + 16 + line * 2);
+    dat_tx.moveTo(x, y);
+    dat_tx.lineTo(x - 4, y + 4);
+    dat_tx.moveTo(x - 4 - line, y + 4 + line);
+    dat_tx.lineTo(x - 8 - line, y + 8 + line);
+    dat_tx.lineTo(x - 4 - line, y + 12 + line);
+    dat_tx.moveTo(x - 4, y + 12 + line * 2);
+    dat_tx.lineTo(x, y + 16 + line * 2);
+    dat_tx.stroke();
     post.prepend(canvas);
 }
