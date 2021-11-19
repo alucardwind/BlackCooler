@@ -116,3 +116,9 @@ function change_sidebar() {
         });
     }
 }
+
+function change_pagecol_width() {
+    let page_width = $('#page').outerWidth();
+    let title_width = $('.col').outerWidth();
+    $('.page_col').css('width', page_width - title_width);
+}

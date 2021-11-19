@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+.page_col{
+    float: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+/*页面样式*/
+
+.page_col .post_words{
+    border: 1px solid #344349;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.64), rgba(18, 53, 68, 0));
+    position: relative;
+    padding: 25px 25px 25px 30px;
+}
+
+.page_col .post_info{
+    position: absolute;
+    padding: 0 10px 0 10px;
+    border-right: 2px solid #344349;
+}
+
+.page_col .post_title{
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.page_col .post_title a{
+    color: #19a2a9;
+}
+
+.page_col .post_content{
+    clear: both;
+    padding: 20px 30px 20px 40px;
+    text-indent: 2em;
+    line-height: 1.8em;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.page_col .post_content p{
+    padding-bottom: 1em;
+}
+
+.page_col .sign{
+    text-align: right;
+    padding:0 30px 1em 0;
+}
+
+/*评论样式*/
+
+.page_col .post_comments{
+    display: flow-root;
+    margin-top: 10px;
+    border-bottom: 1px solid #344349;
+    border-right: 1px solid #bdde2d;
+    border-left: 1px solid #bdde2d;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.4), rgba(18, 53, 68, 0));
+    position: relative;
+    padding: 25px 25px 25px 30px;
+}
+
+.page_col .call_name{
+    float: left;
+    width: 50%;
+    padding-top: 10px;
+}
+
+.page_col .call_text{
+    float: left;
+    width: 50%;
+}
+
+.page_col .call_name label{
+    line-height: 2em;
+}
+
+.page_col .call_name input{
+    box-sizing: border-box;
+    width: 70%;
+    background: none;
+    border: 1px solid #344349;
+    float: right;
+    line-height: 2em;
+}
+
+.page_col .call_name p{
+    margin-top: 10px;
+}
+
+.page_col .call_name #wp-comment-cookies-consent{
+    float: none;
+    width: auto;
+}
+
+.page_col .call_text p{
+    margin-bottom: 10px;
+}
+
+.page_col .call_text .comment-form-comment{
+    padding-left: 10px;
+}
+
+.page_col .call_text #comment{
+    width: 100%;
+    background: none;
+    border: 1px solid #344349;
+}
+
+.page_col .call_text input{
+    float: right;
+    background: none;
+    border: 1px solid #344349;
+    line-height: 2em;
+    padding-right: 40px;
+    padding-left: 40px;
+}

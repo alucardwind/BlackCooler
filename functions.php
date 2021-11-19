@@ -20,7 +20,7 @@ function get_content( $name = null ) {
     locate_template( $templates, true, false);
 }
 
-function get_single( $name = null ) {
+function get_single( $name ) {
     $templates = array();
     $name      = (string) $name;
     if ( '' !== $name ) {
@@ -28,6 +28,16 @@ function get_single( $name = null ) {
     }
 //    $templates[] = 'content.php';
     locate_template( $templates, true, false);
+}
+
+function get_single_page( $name ) {
+	$templates = array();
+	$name      = (string) $name;
+	if ( '' !== $name ) {
+		$templates[] = "page_{$name}.php";
+	}
+//    $templates[] = 'content.php';
+	locate_template( $templates, true, false);
 }
 
 //更改comment的input顺序

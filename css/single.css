@@ -87,6 +87,8 @@
     padding:0 30px 1em 0;
 }
 
+/*评论样式*/
+
 .row .post_comments{
     display: flow-root;
     margin-top: 10px;

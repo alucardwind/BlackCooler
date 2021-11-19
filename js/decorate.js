@@ -50,6 +50,12 @@ function show_single_decorate() {
     single_comments_cover();
 }
 
+function show_page_decorate() {
+    title_decorate();
+    single_comments_cover( '.page_col .post_comments' );
+    page_post_cover();
+}
+
 function sidebar_decorate() {
     $('.col #sidebar ul li ul, .col #sidebar ul li ol').each(function () {
         if ($(this).height() >= 80){
@@ -76,8 +82,8 @@ function sidebar_decorate() {
     });
 }
 
-function title_decorate() {
-    let title = $(".col #title");
+function title_decorate( select = ".col #title") {
+    let title = $(select);
     let title_width = title.outerWidth();
     let title_height = title.outerHeight();
     let canvas = creat_canvas("title_cover", title_width, title_height);
@@ -554,8 +560,8 @@ function single_post_cover() {
     post.prepend(canvas);
 }
 
-function single_comments_cover() {
-    let post = $('.row .post_comments');
+function single_comments_cover( select = '.row .post_comments' ) {
+    let post = $(select);
     let post_width = post.outerWidth();
     let post_height = post.outerHeight();
     let canvas = creat_canvas("single_post_cover", post_width, post_height);
@@ -668,6 +674,65 @@ function single_comments_cover() {
     dat_tx.lineTo(x - 4 - line, y + 12 + line);
     dat_tx.moveTo(x - 4, y + 12 + line * 2);
     dat_tx.lineTo(x, y + 16 + line * 2);
+    dat_tx.stroke();
+    post.prepend(canvas);
+}
+
+function page_post_cover() {
+    let post = $('.page_col .post_words');
+    let post_width = post.outerWidth();
+    let post_height = post.outerHeight();
+    let canvas = creat_canvas("page_post_cover", post_width, post_height);
+    $(canvas).css("position", "absolute");
+    $(canvas).css("inset", "0px");
+    let dat_tx = canvas.getContext("2d");
+    dat_tx.scale(2,2);
+    dat_tx.beginPath();
+    dat_tx.fillStyle = "#bdde2d";
+    dat_tx.fillRect(post_width - 10, 0, 8, 8);
+    dat_tx.fill();
+    dat_tx.beginPath();
+    dat_tx.fillRect(0, post_height - 10, 8, 8);
+    dat_tx.fill();
+    dat_tx.beginPath();
+    dat_tx.lineWidth = 4;
+    dat_tx.strokeStyle = "#bdde2d";
+    dat_tx.moveTo(2, 0);
+    dat_tx.lineTo(2, 150);
+    dat_tx.moveTo(2, 180);
+    dat_tx.lineTo(2, 240);
+    dat_tx.stroke();
+    if (post_height > 400) {
+        dat_tx.beginPath();
+        dat_tx.strokeStyle = "#ffffff";
+        let y = Math.floor(post_height * 0.6);
+        dat_tx.moveTo(2, y);
+        dat_tx.lineTo(2, y + 40);
+        dat_tx.moveTo(2, y + 50);
+        dat_tx.lineTo(2, y + 110);
+        dat_tx.moveTo(2, y + 130);
+        dat_tx.lineTo(2, y + 190);
+        dat_tx.moveTo(2, y + 220);
+        dat_tx.lineTo(2, y + 300);
+        dat_tx.moveTo(2, y + 310);
+        dat_tx.lineTo(2, y + 380);
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.moveTo(post_width - 2, post_height - 50);
+        dat_tx.lineTo(post_width - 2, post_height - 150);
+        dat_tx.moveTo(post_width - 2, post_height - 160);
+        dat_tx.lineTo(post_width - 2, post_height - 260);
+        dat_tx.stroke();
+    }
+    dat_tx.beginPath();
+    dat_tx.strokeStyle = "#ffffff";
+    dat_tx.lineWidth = 1;
+    dat_tx.globalAlpha = 0.5;
+    for (let i = 0; i < 10; i++) {
+        let x = 40 + i * 25
+        dat_tx.rect(x, post_height - 18, 20, 5);
+    }
     dat_tx.stroke();
     post.prepend(canvas);
 }
