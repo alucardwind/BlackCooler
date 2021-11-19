@@ -78,3 +78,17 @@ function change_page_width(bcw) {
     }
     $('#page').width(page_width);
 }
+
+function change_sidebar() {
+    let first_li = $('.row #sidebar ul li');
+    if (first_li.length > 0){
+        first_li.each(function () {
+            if ($(this).children('h2').length > 0){
+                console.log($(this).children('h2'));
+            }
+            else {
+                console.log("mei");
+            }
+        });
+    }
+}

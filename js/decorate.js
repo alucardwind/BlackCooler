@@ -17,8 +17,8 @@ function canvas_rect(dat_tx, start_x, start_y, width, height, linewidth, color, 
     dat_tx.lineCap="round";
     dat_tx.lineJoin="round";
     let start = Math.round(linewidth / 2);
-    width = width - 2;
-    height = height - 2;
+    width = width - 1;
+    height = height - 1;
     dat_tx.moveTo(start_x + start, start_y + start);
     dat_tx.lineTo(start_x + length, start_y + start);
     dat_tx.moveTo(start_x + width - length, start_y + start)
@@ -586,32 +586,67 @@ function single_comments_cover() {
     dat_tx.lineTo(post_width - 30, post_height - 10);
     dat_tx.stroke();
     dat_tx.beginPath();
+    dat_tx.setLineDash([]);
     dat_tx.strokeStyle = "#bdde2d";
     dat_tx.globalAlpha = 1;
-    dat_tx.lineWidth = 2;
-    dat_tx.setLineDash([10, 15]);
-    dat_tx.moveTo(post_width - 60, 1);
-    dat_tx.lineTo(post_width - 300, 1);
-    dat_tx.moveTo(post_width - 64, 3);
-    dat_tx.lineTo(post_width - 300, 3);
+    dat_tx.lineWidth = 1;
+    dat_tx.setLineDash([2, 4]);
+    let x = 180;
+    dat_tx.moveTo(x, 1);
+    for (let i = 0; i < 3; i++) {
+        x += 30;
+        dat_tx.lineTo(x, 1);
+        x += 10;
+        dat_tx.moveTo(x, 1);
+    }
+    x = 165;
+    dat_tx.moveTo(x, 3);
+    for (let i = 0; i < 4; i++) {
+        x += 30;
+        dat_tx.lineTo(x, 3);
+        x += 10;
+        dat_tx.moveTo(x, 3);
+    }
     dat_tx.stroke();
     dat_tx.beginPath();
     dat_tx.setLineDash([]);
-    dat_tx.strokeStyle = "#ffffff";
-    dat_tx.lineWidth = 1;
-    dat_tx.globalAlpha = 0.5;
-    for (let i = 0; i < 10; i++) {
-        let x = 40 + i * 25
-        dat_tx.rect(x, post_height - 18, 20, 5);
+    dat_tx.moveTo(163, 2);
+    dat_tx.lineTo(325, 2);
+    dat_tx.stroke();
+    dat_tx.beginPath();
+    dat_tx.globalAlpha = 1;
+    dat_tx.setLineDash([2, 4]);
+    x = 80;
+    dat_tx.moveTo(post_width - x, post_height - 1);
+    for (let i = 0; i < 3; i++) {
+        x += 30;
+        dat_tx.lineTo(post_width - x, post_height - 1);
+        x += 10;
+        dat_tx.moveTo(post_width - x, post_height - 1);
+    }
+    x = 65;
+    dat_tx.moveTo(post_width - x, post_height - 3);
+    for (let i = 0; i < 4; i++) {
+        x += 30;
+        dat_tx.lineTo(post_width - x, post_height - 3);
+        x += 10;
+        dat_tx.moveTo(post_width - x, post_height - 3);
     }
     dat_tx.stroke();
-    if (post_height > 230) {
-        dat_tx.beginPath();
-        dat_tx.lineWidth = 2;
-        dat_tx.setLineDash([1, 4]);
-        dat_tx.moveTo(1, 30);
-        dat_tx.lineTo(1, 230);
-        dat_tx.stroke();
+    dat_tx.beginPath();
+    dat_tx.setLineDash([]);
+    dat_tx.moveTo(post_width - 63, post_height - 2);
+    dat_tx.lineTo(post_width - 225, post_height - 2);
+    dat_tx.stroke();
+    dat_tx.beginPath();
+    let y = 20;
+    while (y < post_height - 20) {
+        dat_tx.moveTo(0, y);
+        dat_tx.lineTo(4, y);
+        dat_tx.moveTo(post_width, y);
+        dat_tx.lineTo(post_width - 4, y);
+        y += 20;
     }
+    dat_tx.stroke();
     post.prepend(canvas);
 }

@@ -10,7 +10,7 @@
 /* 标题栏 */
 
 #single_row0{
-    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .row #title{
@@ -42,8 +42,7 @@
 /* 日志栏 */
 
 #single_row1{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .row .post_words{
@@ -91,8 +90,9 @@
 .row .post_comments{
     display: flow-root;
     margin-top: 10px;
-    border: 1px solid #344349;
-    border-top: 0;
+    border-bottom: 1px solid #344349;
+    border-right: 1px solid #bdde2d;
+    border-left: 1px solid #bdde2d;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.4), rgba(18, 53, 68, 0));
     position: relative;
     padding: 25px 25px 25px 30px;
@@ -101,6 +101,7 @@
 .row .call_name{
     float: left;
     width: 50%;
+    padding-top: 10px;
 }
 
 .row .call_text{
@@ -108,5 +109,53 @@
     width: 50%;
 }
 
+.row .call_name label{
+    line-height: 2em;
+}
+
+.row .call_name input{
+    box-sizing: border-box;
+    width: 70%;
+    background: none;
+    border: 1px solid #344349;
+    float: right;
+    line-height: 2em;
+}
+
+.row .call_name p{
+    margin-top: 10px;
+}
+
+.row .call_name #wp-comment-cookies-consent{
+    float: none;
+    width: auto;
+}
+
+.row .call_text p{
+    margin-bottom: 10px;
+}
+
+.row .call_text .comment-form-comment{
+    padding-left: 10px;
+}
+
+.row .call_text #comment{
+    width: 100%;
+    background: none;
+    border: 1px solid #344349;
+}
+
+.row .call_text input{
+    float: right;
+    background: none;
+    border: 1px solid #344349;
+    line-height: 2em;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
 /* 侧边栏样式 */
 
+.row #sidebar ul li{
+    display: block;
+}

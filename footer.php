@@ -13,5 +13,6 @@ if (is_single()) :
 <script>
     change_page_width(body_clientWidth);
     show_single_decorate();
+    change_sidebar();
 </script>
 <?php endif; ?>
