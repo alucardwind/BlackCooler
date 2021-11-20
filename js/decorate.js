@@ -42,6 +42,7 @@ function show_decorate() {
     cats_decorate();
     postswords_decorate();
     posttitle_decorate();
+    single_comments_cover( '#zhiding .comments' )
 }
 
 function show_single_decorate() {
@@ -560,7 +561,7 @@ function single_post_cover() {
     post.prepend(canvas);
 }
 
-function single_comments_cover( select = '.row .post_comments' ) {
+function single_comments_cover( select = '.row .comments' ) {
     let post = $(select);
     let post_width = post.outerWidth();
     let post_height = post.outerHeight();

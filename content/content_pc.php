@@ -105,6 +105,10 @@
     query_posts( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1 ) );
     while ( have_posts() ) : the_post();
 	    get_content();
+        echo '<div class="comments">';
+	    $args = array('submit_field' => '<p class="form-submit">%1$s %2$s</p></div>');
+	    comment_form($args);
+        echo '</div>';
     endwhile;
     wp_reset_query();
     echo "</div>";

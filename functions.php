@@ -14,9 +14,9 @@ function get_content( $name = null ) {
     $templates = array();
     $name      = (string) $name;
     if ( '' !== $name ) {
-        $templates[] = "content_{$name}.php";
+        $templates[] = "content/content_{$name}.php";
     }
-    $templates[] = 'content.php';
+    $templates[] = 'content/content.php';
     locate_template( $templates, true, false);
 }
 
@@ -73,3 +73,11 @@ function change_fields_order( $fields ) {
 	return $fields;
 }
 add_filter( 'comment_form_fields', 'change_fields_order' );
+
+function search_filter_page ($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'post');
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'search_filter_page');

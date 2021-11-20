@@ -31,10 +31,8 @@
                 </div>
             </div>
         </div>
-        <div class="post_comments">
-		    <?php comments_template('/comments.php', true); ?>
-        </div>
-    <?php endwhile; ?>
+        <?php comments_template('/comments.php', true);
+    endwhile; ?>
 </div>
 <div id="single_row2" class="row">
     <?php get_sidebar() ?>
