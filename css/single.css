@@ -166,35 +166,34 @@
     display: block;
 }
 
-.row .widget_block{
+.row .widget{
     float: left;
     box-sizing: border-box;
+
 }
 
-.row .sidebar_content{
+.row .widget ul{
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.68), rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.68));
     border-left: 3px solid black;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-.row .sidebar_title{
-    border-left: 3px solid #7b8487;
-}
-
-.row .sidebar_first_title{
-    border-left: 4px solid #bdde2d;
-}
-
-.row .sidebar_first_content{
-    border-left: 4px solid #7b8487;
-}
-
-.row .widget_block h2{
+.row .widget h2{
     color: white;
     font-size: 1.1em;
     font-weight: bold;
     padding-left: 20px;
     line-height: 2em;
     letter-spacing: 2px;
+    border-left: 3px solid #a09faa;
     background-image: linear-gradient(to bottom, #02545f, #05949a 52%, #02545f 81%, #030e17 100%);
+}
+
+.row .sidebar_first h2{
+    border-left: 4px solid #bdde2d;
+}
+
+.row .sidebar_first ul{
+    border-left: 4px solid #7b8487;
 }

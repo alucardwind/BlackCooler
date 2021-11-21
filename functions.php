@@ -81,3 +81,13 @@ function search_filter_page ($query) {
 	return $query;
 }
 add_filter('pre_get_posts', 'search_filter_page');
+
+function get_weibo( $name = null ) {
+	$templates = array();
+	$name      = (string) $name;
+	if ( '' !== $name ) {
+		$templates[] = "weibo_{$name}.php";
+	}
+	$templates[] = 'weibo.php';
+	locate_template( $templates, true, false);
+}

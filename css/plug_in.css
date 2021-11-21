@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* 侧边栏登录 */
+
+.lwa{
+    margin: 0 !important;
+    padding: 10px;
+    border-right: 1px solid #344349;
+    border-left: 4px solid #a09faa;
+}
+
+.row .lwa{
+    border: none;
+    border-left: 3px solid black;;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.68), rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.68));
+    box-sizing: border-box;
+}
+
+/* 视频 */
+
+#bilibili{
+    width: 220px;
+}
+
+#bili_form{
+    width: 220px;
+    text-align: left;
+}
+
+.row #bilibili{
+    width: 98%;
+}
+
+.row #bili_form{
+    width: auto;
+}
+
+#bili_form input{
+    background: none;
+    border: 1px solid #344349;
+}
+
+/* aplayer侧边栏控制 */
+
+#aplayer_li input{
+    background: none;
+    border: 1px solid #344349;
+}
+
+/* 微博 */
+
+.weibo_line{
+    border-top: 1px solid #344349;
+    margin-top: 1.2em;
+}
+
+.weibo_text{
+    text-align: left;
+}
+
+.weibo_user{
+    text-align: right;
+}
+
+/* page nav */
+
+.page_navi{
+    clear: both;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.page_navi li{
+    display: inline;
+    border: 1px solid #344349;
+    padding: 10px;
+}
+

@@ -12,6 +12,7 @@
     <div id="page_bar">
 	    <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
     </div>
+    <?php rol_copyright(); ?>
 </div>
 <div id="col1" class="col">
     <?php get_sidebar() ?>
@@ -95,6 +96,15 @@
             $bc_post_num++;
         endwhile;
     endif;
+    page_navi( array(
+	    'items'        => 7,
+	    'prev_label'   => '上一页',
+	    'next_label'   => '下一页',
+	    'first_label'  => '首页',
+	    'last_label'   => '末页',
+	    'show_num'     => true,
+	    'num_position' => 'after'
+    ) );
     // 单独显示置顶文章
     echo "<div id='zhiding'>";
     $sticky = get_option( 'sticky_posts' );

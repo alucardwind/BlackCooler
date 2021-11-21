@@ -16,7 +16,7 @@ a{
 }
 
 body{
-    --col0_width: 150px;
+    --col0_width: 215px;
     --sidebar_width: 250px;
     --posttitle_width: 230px;
     font-size: 15px;
@@ -99,6 +99,16 @@ body{
     line-height: 2em;
 }
 
+.col #owner{
+    float: right;
+    padding-top: 20px;
+    text-align: right;
+}
+
+.col #owner span{
+    padding-left: 10px;
+}
+
 /* 侧边栏样式 */
 
 #col1{
@@ -118,7 +128,7 @@ body{
 .col #sidebar ul li ul, .col #sidebar ul li ol{
     border-left: 4px solid #a09faa;
     border-right: 1px solid #344349;
-    padding-left: 10px;
+    padding: 10px 0 10px 10px;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.5), rgba(18, 53, 68, 0) 65%, rgba(18, 53, 68, 0) 80%, rgba(18, 53, 68, 0.5) 100%);
 }
 
@@ -126,7 +136,7 @@ body{
     text-align: center;
     display: block;
     line-height: 2em;
-    width: calc(var(--sidebar_width) - 15px);
+    width: calc(var(--sidebar_width) - 25px);
 }
 
 .col #sidebar h2{
@@ -260,6 +270,10 @@ body{
 
 .col .post_content p{
     padding-bottom: 1em;
+}
+
+.col .wp-block-image{
+    text-indent: 0;
 }
 
 .col .sign{

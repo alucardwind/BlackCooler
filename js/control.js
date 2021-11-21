@@ -80,39 +80,18 @@ function change_page_width(bcw) {
 }
 
 function change_sidebar() {
-    let title_array = new Array();
-    let content_array = new Array();
-    let first_li = $('.row .widget_block');
+    let first_li = $('.row .widget');
+    console.log(first_li);
     if (first_li.length > 0){
-        let first_title = true;
-        let first_content = true;
-        first_li.each(function () {
-            if ($(this).children('h2').length > 0){
-                if (first_title) {
-                    $(this).addClass('sidebar_first_title');
-                    first_title = false;
-                }
-                $(this).addClass('sidebar_title');
-                title_array.push(this);
-            }
-            else {
-                if (first_content) {
-                    $(this).addClass('sidebar_first_content');
-                    first_content = false;
-                }
-                $(this).addClass('sidebar_content');
-                content_array.push(this);
-            }
-        });
-        let sidebar_ul = $('.row #sidebar_first_ul');
-        sidebar_ul.empty();
-        sidebar_ul.append(title_array);
-        sidebar_ul.append(content_array);
         let sidebar_width = $('.row #sidebar').outerWidth();
-        let li_width = Math.floor(sidebar_width / title_array.length);
-        console.log(li_width);
-        $('.row .widget_block').each(function () {
+        let li_width = Math.floor(sidebar_width / first_li.length);
+        let the_first = true;
+        first_li.each(function () {
             $(this).css('width', li_width);
+            if (the_first) {
+                $(this).addClass('sidebar_first');
+                the_first = false;
+            }
         });
     }
 }
@@ -121,4 +100,12 @@ function change_pagecol_width() {
     let page_width = $('#page').outerWidth();
     let title_width = $('.col').outerWidth();
     $('.page_col').css('width', page_width - title_width);
+}
+
+function control_img() {
+    $('.col .wp-block-image').each(function () {
+        let img_width = $(this).find('img').naturalWidth;
+        console.log($(this).find('img'));
+        console.log(img_width);
+    });
 }

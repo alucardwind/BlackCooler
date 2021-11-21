@@ -4,6 +4,7 @@
 </script>
 <?php if (is_home() || is_paged() || is_archive() || is_search()) : ?>
     <script>
+        control_img();
         show_decorate();
     </script>
 <?php
