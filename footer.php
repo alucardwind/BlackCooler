@@ -5,6 +5,7 @@
 <?php if (is_home() || is_paged() || is_archive() || is_search()) : ?>
     <script>
         control_img();
+        fix_code();
         show_decorate();
     </script>
 <?php
@@ -13,7 +14,8 @@ if (is_single()) :
 ?>
     <script>
         change_page_width(body_clientWidth);
-        control_img('.row .post_words', '.row .wp-block-image')
+        control_img('.row .post_words', '.row .wp-block-image', 4);
+        fix_code();
         show_single_decorate();
         change_sidebar();
     </script>

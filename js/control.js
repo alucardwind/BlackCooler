@@ -81,7 +81,6 @@ function change_page_width(bcw) {
 
 function change_sidebar() {
     let first_li = $('.row .widget');
-    console.log(first_li);
     if (first_li.length > 0){
         let sidebar_width = $('.row #sidebar').outerWidth();
         let li_width = Math.floor(sidebar_width / first_li.length);
@@ -102,23 +101,23 @@ function change_pagecol_width() {
     $('.page_col').css('width', page_width - title_width);
 }
 
-function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-image') {
+function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-image', w = 2) {
     let post_width = $(select1).width();
     let img_width = post_width;
     $(select2).each(function () {
         if ($(this).find('figure').hasClass('alignleft')) {
             $(this).css('float', 'left');
-            img_width = post_width / 2;
+            img_width = post_width / w;
         }
         else if ($(this).find('figure').hasClass('alignright')) {
             $(this).css('float', 'right');
-            img_width = post_width / 2;
+            img_width = post_width / w;
         }
         else {
             $(this).find('figure').css('clear', 'both');
             $(this).find('figure').css('margin-left', 'auto');
             $(this).find('figure').css('margin-right', 'auto');
-            img_width = post_width;
+            img_width = post_width * 2 / w;
         }
         $(this).find('img').removeAttr('width');
         $(this).find('img').removeAttr('height');
@@ -127,3 +126,25 @@ function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-ima
     });
 }
 
+function fix_code() {
+    let block_code = $('.wp-block-code');
+    if (block_code.length == 0){
+        return;
+    }
+    block_code.each(function () {
+        let code = $(this).find('code');
+        let code_height = code.height();
+        console.log(code_height);
+        let num = code_height / 18;
+        console.log(num);
+        let ul_node = document.createElement('ul');
+        ul_node.setAttribute('class', 'code_list_num');
+        for(let ii = 1; ii <= num; ii++){
+            let li_node = document.createElement("LI");
+            let li_node_text = document.createTextNode(ii);//创建li内容
+            li_node.appendChild(li_node_text);//将li内容填入li标签内
+            ul_node.appendChild(li_node);//将li填入ul内
+        }
+        this.appendChild(ul_node);
+    });
+}

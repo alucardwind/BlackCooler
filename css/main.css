@@ -301,6 +301,39 @@ body{
     margin: 0;
 }
 
+.wp-block-code{
+    position: relative;
+    white-space: pre-wrap;/*代码段自动换行*/
+    word-wrap: break-word;
+    word-break: break-word;
+    padding: 5px 0px 5px 35px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #bdde2d;
+    text-indent: 0;
+}
+
+.wp-block-code code{
+    font-family: Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif;
+    line-height: 1.2em;
+}
+
+.code_list_num{
+    position: absolute;
+    list-style: none;
+    top: 0;
+    left: 0;
+    padding: 5px 5px 0 5px;
+    width: 20px;
+    border-right: 1px solid white;
+    line-height: 1.2em;
+    z-index: -2;
+}
+
+.wp-block-quote{
+    border: 1px solid #344349;
+    padding: 10px;
+}
+
 .col .sign{
     text-align: right;
     padding-bottom: 1em;
