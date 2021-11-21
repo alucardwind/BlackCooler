@@ -13,6 +13,7 @@ if (is_single()) :
 ?>
     <script>
         change_page_width(body_clientWidth);
+        control_img('.row .post_words', '.row .wp-block-image')
         show_single_decorate();
         change_sidebar();
     </script>

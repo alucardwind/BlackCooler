@@ -238,6 +238,7 @@ body{
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 25%,rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
     position: relative;
     padding: 20px 15px 20px 40px;
+    display: flow-root;
 }
 
 .col .post_info{
@@ -274,11 +275,36 @@ body{
 
 .col .wp-block-image{
     text-indent: 0;
+    margin: 0 0 5px 0;
+    box-sizing: border-box;
+}
+
+.col .wp-block-image figure{
+    margin: 0;
+    border: 1px solid #344349;
+}
+
+.col .wp-block-image .alignleft{
+    margin-right: 10px;
+}
+
+.col .wp-block-image .alignright{
+    margin-left: 10px;
+}
+
+.col .wp-block-image img{
+    object-fit: contain;
+}
+
+.col .wp-block-image figcaption{
+    text-align: center;
+    margin: 0;
 }
 
 .col .sign{
     text-align: right;
     padding-bottom: 1em;
+    clear: both;
 }
 
 .col #zhiding{

@@ -102,10 +102,28 @@ function change_pagecol_width() {
     $('.page_col').css('width', page_width - title_width);
 }
 
-function control_img() {
-    $('.col .wp-block-image').each(function () {
-        let img_width = $(this).find('img').naturalWidth;
-        console.log($(this).find('img'));
-        console.log(img_width);
+function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-image') {
+    let post_width = $(select1).width();
+    let img_width = post_width;
+    $(select2).each(function () {
+        if ($(this).find('figure').hasClass('alignleft')) {
+            $(this).css('float', 'left');
+            img_width = post_width / 2;
+        }
+        else if ($(this).find('figure').hasClass('alignright')) {
+            $(this).css('float', 'right');
+            img_width = post_width / 2;
+        }
+        else {
+            $(this).find('figure').css('clear', 'both');
+            $(this).find('figure').css('margin-left', 'auto');
+            $(this).find('figure').css('margin-right', 'auto');
+            img_width = post_width;
+        }
+        $(this).find('img').removeAttr('width');
+        $(this).find('img').removeAttr('height');
+        $(this).find('img').width(img_width);
+        $(this).find('img').height(img_width);
     });
 }
+
