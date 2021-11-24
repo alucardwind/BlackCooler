@@ -317,6 +317,29 @@ body{
     line-height: 1.2em;
 }
 
+.wp-block-media-text{
+    margin-bottom: 1em;
+    border-top: 1px solid #344349;
+}
+
+.wp-block-media-text .wp-block-media-text__media{
+    text-indent: 0;
+    padding-top: 10px;
+    border-right: 1px dashed #344349;
+    padding-right: 10px;
+}
+
+.has-media-on-the-right .wp-block-media-text__media{
+    border-right: none;
+    border-left: 1px dashed #344349;
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+.wp-block-media-text .wp-block-media-text__media img{
+    object-fit: cover;
+}
+
 .code_list_num{
     position: absolute;
     list-style: none;

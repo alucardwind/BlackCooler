@@ -5,6 +5,12 @@ const new_middle_screen_width = 1871;
 const single_max_width = 1640;
 const single_min_width = 825;
 
+function fit_all_functions() {
+    fix_code();
+    control_gallery();
+    control_media_text();
+}
+
 function GetQueryString(name)
 {
     let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -134,9 +140,7 @@ function fix_code() {
     block_code.each(function () {
         let code = $(this).find('code');
         let code_height = code.height();
-        console.log(code_height);
         let num = code_height / 18;
-        console.log(num);
         let ul_node = document.createElement('ul');
         ul_node.setAttribute('class', 'code_list_num');
         for(let ii = 1; ii <= num; ii++){
@@ -146,5 +150,27 @@ function fix_code() {
             ul_node.appendChild(li_node);//将li填入ul内
         }
         this.appendChild(ul_node);
+    });
+}
+
+function control_gallery() {
+    let post_words_width = $('.post_words').width();
+    let item_width = (post_words_width - 30) / 3;
+    let block_gallery = $('.blocks-gallery-item');
+    if (block_gallery.length == 0) {
+        return;
+    }
+    block_gallery.each(function () {
+        $(this).height(item_width);
+    });
+}
+
+function control_media_text() {
+    $('.wp-block-media-text').each(function () {
+        let img = $(this).find('img');
+        let words_height = $(this).children('.wp-block-media-text__content').height();
+        console.log(words_height);
+        $(img).removeAttr('width');
+        $(img).attr('height',words_height);
     });
 }

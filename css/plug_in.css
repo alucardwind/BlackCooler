@@ -22,6 +22,10 @@
     border: 1px solid #344349;
 }
 
+#lwa_wp-submit{
+    padding: 2px 5px 2px 5px;
+}
+
 /* 视频 */
 
 #bilibili{
