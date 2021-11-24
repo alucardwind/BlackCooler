@@ -239,6 +239,8 @@ body{
     position: relative;
     padding: 20px 15px 20px 40px;
     display: flow-root;
+    /*max-height: 1000px;*/
+    /*overflow: hidden;*/
 }
 
 .col .post_info{
