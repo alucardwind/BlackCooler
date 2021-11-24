@@ -7,6 +7,7 @@
     padding: 10px;
     border-right: 1px solid #344349;
     border-left: 4px solid #a09faa;
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.5), rgba(18, 53, 68, 0) 65%, rgba(18, 53, 68, 0) 80%, rgba(18, 53, 68, 0.5) 100%);
 }
 
 .row .lwa{
@@ -14,6 +15,11 @@
     border-left: 3px solid black;;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.68), rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.68));
     box-sizing: border-box;
+}
+
+.lwa input{
+    background: none;
+    border: 1px solid #344349;
 }
 
 /* 视频 */
