@@ -22,6 +22,7 @@ if (is_single()) :
             change_page_width(body_clientWidth);
             control_img('.row .post_words', '.row .wp-block-image', 4);
             fit_all_functions();
+            display_readmore();
             show_single_decorate();
             change_sidebar();
         });
@@ -35,6 +36,7 @@ if (is_page()) :
             change_page_width(body_clientWidth);
             change_pagecol_width();
             fit_all_functions();
+            display_readmore();
             show_page_decorate();
         });
     </script>

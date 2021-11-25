@@ -176,3 +176,9 @@ function control_media_text() {
         $(img).attr('height',words_height);
     });
 }
+
+function display_readmore() {
+    $('.readmore').each(function () {
+        $(this).css('display', 'none');
+    });
+}

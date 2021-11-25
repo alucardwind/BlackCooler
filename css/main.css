@@ -239,8 +239,8 @@ body{
     position: relative;
     padding: 20px 15px 20px 40px;
     display: flow-root;
-    /*max-height: 1000px;*/
-    /*overflow: hidden;*/
+    max-height: 1000px;
+    overflow: hidden;
 }
 
 .col .post_info{
@@ -359,15 +359,39 @@ body{
     padding: 10px;
 }
 
+.col .post_bottom_cover{
+    background: black;
+}
+
 .col .sign{
     text-align: right;
     padding-bottom: 1em;
     clear: both;
 }
 
+.readmore{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+    position: absolute;
+    width: 343px;
+    height: 50px;
+    top: 953px;
+    text-indent: 0;
+    text-align: center;
+    line-height: 5em;
+    vertical-align: bottom;
+}
+
 .col #zhiding{
     clear: both;
     float: left;
+}
+
+#zhiding .post_bottom_cover{
+    display: none;
+}
+
+#zhiding .readmore{
+    display: none;
 }
 
 #zhiding .comments{

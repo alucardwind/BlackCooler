@@ -260,22 +260,7 @@ function postswords_decorate() {
             dat_tx.rect(x, post_height - 18, 20, 5);
         }
         dat_tx.stroke();
-        dat_tx.beginPath();
-        dat_tx.lineWidth = 2;
-        dat_tx.moveTo(0, 1);
-        dat_tx.lineTo(20, 1);
-        dat_tx.moveTo(1, 1);
-        dat_tx.lineTo(1, 20);
-        dat_tx.moveTo(post_width - 20, 1);
-        dat_tx.lineTo(post_width - 1, 1);
-        dat_tx.lineTo(post_width - 1, 20);
-        dat_tx.moveTo(post_width - 1, post_height - 20);
-        dat_tx.lineTo(post_width - 1, post_height - 1);
-        dat_tx.lineTo(post_width - 20, post_height - 1);
-        dat_tx.moveTo(20, post_height - 1);
-        dat_tx.lineTo(1, post_height - 1);
-        dat_tx.lineTo(1, post_height - 20);
-        dat_tx.stroke();
+        canvas_rect(dat_tx, 0, 0, post_width, post_height, 2, '#ffffff', 0.5, 20);
         dat_tx.beginPath();
         dat_tx.strokeStyle = "#bdde2d";
         dat_tx.globalAlpha = 1;
@@ -287,24 +272,8 @@ function postswords_decorate() {
         dat_tx.moveTo(x, 4);
         dat_tx.lineTo(post_width - 220, 4);
         dat_tx.stroke();
-        dat_tx.beginPath();
         dat_tx.setLineDash([]);
-        dat_tx.lineWidth = 4;
-        dat_tx.strokeStyle = "#ffffff";
-        dat_tx.moveTo(15, 15);
-        dat_tx.lineTo(30, 15);
-        dat_tx.moveTo(post_width - 30, 15);
-        dat_tx.lineTo(post_width - 15, 15);
-        dat_tx.lineTo(post_width - 15, 30);
-        dat_tx.moveTo(post_width - 15, post_height - 30);
-        dat_tx.lineTo(post_width - 15, post_height - 15);
-        dat_tx.lineTo(post_width - 30, post_height - 15);
-        dat_tx.moveTo(30, post_height - 15);
-        dat_tx.lineTo(15, post_height - 15);
-        dat_tx.lineTo(15, post_height - 30);
-        dat_tx.moveTo(15, 30);
-        dat_tx.lineTo(15, 13);
-        dat_tx.stroke();
+        canvas_rect(dat_tx, 15, 15, post_width - 30, post_height - 30, 4, '#ffffff', 1, 15);
         dat_tx.beginPath();
         dat_tx.lineWidth = 2;
         dat_tx.setLineDash([2, 4]);
@@ -324,6 +293,37 @@ function postswords_decorate() {
         dat_tx.globalAlpha = 0.5;
         dat_tx.moveTo(40, 15);
         dat_tx.lineTo(40, 40);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+        canvas = creat_canvas('post_bottom_cover', post_width - 39, 35);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("left", "35px");
+        $(canvas).css("bottom", "2px");
+        $(canvas).css("z-index", "2");
+        dat_tx = canvas.getContext("2d");
+        dat_tx.beginPath();
+        dat_tx.scale(2,2);
+        dat_tx.strokeStyle = "#ffffff";
+        dat_tx.lineWidth = 1;
+        dat_tx.globalAlpha = 0.5;
+        for (let i = 0; i < 7; i++) {
+            let x = 5 + i * 25
+            dat_tx.rect(x, 25, 20, 5);
+        }
+        dat_tx.stroke();
+        dat_tx.beginPath();
+        dat_tx.lineWidth = 4;
+        dat_tx.globalAlpha = 1;
+        dat_tx.moveTo(347, 10);
+        dat_tx.lineTo(347, 25);
+        dat_tx.lineTo(332, 25);
+        dat_tx.stroke();
+
+        dat_tx.beginPath();
+        dat_tx.lineWidth = 2;
+        dat_tx.strokeStyle = "#bdde2d";
+        dat_tx.moveTo(325, 40);
+        dat_tx.lineTo(325, 27);
         dat_tx.stroke();
         $(this).prepend(canvas);
     });

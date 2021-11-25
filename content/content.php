@@ -15,5 +15,11 @@
         <div class="sign">
 	        <?php the_author(); ?></strong>创作于<?php the_time('Y.m.jS') ?>
         </div>
+        <div class="readmore">
+            <a href="<?php the_permalink() ?>" rel="bookmark"
+               title="进入单页的 <?php the_title(); ?>">
+		        点击进入完整文章
+            </a>
+        </div>
     </div>
 </div>
