@@ -7,7 +7,16 @@ require 'saetv2.ex.class.php';
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-    <title><?php bloginfo('name'); ?></title>
+    <title>
+        <?php
+        if (is_singular()) {
+	        the_title();
+            echo '-';
+	        bloginfo('name');
+        }
+        else {bloginfo('name');}
+        ?>
+    </title>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/main.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/single.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/page.css" type="text/css" media="screen"/>

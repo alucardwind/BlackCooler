@@ -8,6 +8,7 @@
     font-family: "微软雅黑", "Microsoft YaHei", "Segoe UI", sans-serif;
     color: #b6b9bb;
     text-decoration: none;
+    position: relative;
 }
 
 a{
@@ -245,8 +246,12 @@ body{
 
 .col .post_info{
     float: left;
-    padding: 0 10px 0 10px;
+    padding: 0 0 0 10px;
     border-right: 2px solid #bdde2d;
+}
+
+.post_info a{
+    margin-right: 10px;
 }
 
 .col .post_title{
