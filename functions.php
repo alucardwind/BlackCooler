@@ -26,7 +26,6 @@ function get_single( $name ) {
     if ( '' !== $name ) {
         $templates[] = "single_{$name}.php";
     }
-//    $templates[] = 'content.php';
     locate_template( $templates, true, false);
 }
 
@@ -36,7 +35,6 @@ function get_single_page( $name ) {
 	if ( '' !== $name ) {
 		$templates[] = "page_{$name}.php";
 	}
-//    $templates[] = 'content.php';
 	locate_template( $templates, true, false);
 }
 

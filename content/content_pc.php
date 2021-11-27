@@ -12,7 +12,10 @@
     <div id="page_bar">
 	    <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
     </div>
-    <?php rol_copyright(); ?>
+    <?php
+    rol_player(array('type' => 'netease'));
+    rol_copyright();
+    ?>
 </div>
 <div id="col1" class="col">
     <?php get_sidebar() ?>

@@ -57,6 +57,72 @@
     border: 1px solid #344349;
 }
 
+/*网易播放器*/
+
+.aplayer{
+    float: right;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0 0 0;
+    background: none;
+}
+
+.aplayer.aplayer-withlrc .aplayer-pic{
+    float: none;
+    width: 100%;
+}
+
+.aplayer.aplayer-withlrc .aplayer-info {
+    margin-left: 0;
+}
+
+.aplayer.aplayer-withlist .aplayer-info {
+    border-bottom: 1px solid #344349;
+    border-right: 1px solid #344349;
+    border-left: 1px solid #344349;
+}
+
+.aplayer .aplayer-info .aplayer-music .aplayer-author {
+    color: #b6b9bb;
+}
+
+.aplayer .aplayer-lrc:before {
+    background: none;
+}
+
+.aplayer .aplayer-lrc:after {
+    background: none;
+}
+
+.aplayer .aplayer-lrc p {
+    color: #b6b9bb;
+}
+.aplayer .aplayer-list {
+    border-bottom: 1px solid #344349;
+    border-right: 1px solid #344349;
+    border-left: 1px solid #344349;
+}
+
+.aplayer .aplayer-list ol li {
+    border-top: 1px solid #344349;
+}
+
+.aplayer .aplayer-list ol li .aplayer-list-author {
+    color: #b6b9bb;
+}
+
+.aplayer .aplayer-list ol li .aplayer-list-index {
+    color: #b6b9bb;
+}
+
+.aplayer .aplayer-list ol li.aplayer-list-light {
+    background: rgba(18, 53, 68, 1);
+}
+
+.aplayer .aplayer-list ol li:hover {
+    background: rgba(18, 53, 68, 1);
+}
+
 /* 微博 */
 
 .weibo_line{
