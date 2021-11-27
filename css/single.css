@@ -111,6 +111,13 @@
     margin: 0;
 }
 
+.row .wp-block-embed .wp-embedded-content{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    aspect-ratio: unset;
+}
+
 .row .sign{
     text-align: right;
     padding:0 30px 1em 0;

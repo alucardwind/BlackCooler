@@ -9,6 +9,7 @@ function fit_all_functions() {
     fix_code();
     control_media_text();
     control_gallery();
+    control_embed();
 }
 
 function GetQueryString(name)
@@ -169,9 +170,6 @@ function control_media_text() {
     $('.wp-block-media-text').each(function () {
         let img = $(this).find('img');
         let words_height = $(this).children('.wp-block-media-text__content').height();
-        console.log($(this).height());
-        console.log(words_height);
-        console.log('aa');
         $(img).removeAttr('width');
         $(img).attr('height',words_height);
     });
@@ -180,5 +178,13 @@ function control_media_text() {
 function display_readmore() {
     $('.readmore').each(function () {
         $(this).css('display', 'none');
+    });
+}
+
+function control_embed() {
+    $('.wp-embedded-content').each(function () {
+        $(this).removeAttr('style');
+        $(this).removeAttr('width');
+        $(this).removeAttr('height');
     });
 }

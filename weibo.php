@@ -30,14 +30,15 @@
     $can_hits = floor($time_now/960);//微博API规定每天获取次数上限为100，为防止异常情况，我将上限设定为90次。即每960秒可增加一次获取次数。这里计算出到现在时刻，一共可以获取多少次
     $temp_hits = $json_read['already_hits']+1;//从json中获取已经获取的次数，加上本次运行的一次
     $can_hits_real = $can_hits - $temp_hits;//前两者相减获得实际剩余的获取次数
+    $td_width = 102;
     if($can_hits == 0){
         $can_hits_real = 0;
         $ip_width = 0;
     }
     else{
-        $ip_width = $temp_hits / $can_hits * 121;//这里为下面的table中的div背景计算长度，为模拟进度条。这个进度条为表示已经请求的次数和允许请求的次数比值
+        $ip_width = $temp_hits / $can_hits * $td_width;//这里为下面的table中的div背景计算长度，为模拟进度条。这个进度条为表示已经请求的次数和允许请求的次数比值
     }
-    $user_width = ($time_now/960 - $can_hits)*121;//这个进度条为表示离请求次数增加还剩多久
+    $user_width = ($time_now/960 - $can_hits) * $td_width;//这个进度条为表示离请求次数增加还剩多久
     $percent_float = ($time_now/960 - $can_hits) * floatval(100);//以百分数展示还剩多久
     $percent = round($percent_float,0)."%";//以百分数展示还剩多久
     if($can_hits_real >= 1){
@@ -45,7 +46,7 @@
         $json_read['already_hits']++;
         $ms = $c->home_timeline(1,5,0,0,0,0);
         $limit =$c->rate_limit_status();
-        echo "<table><tr><td>剩余请求次数</td><td>请求增速</td></tr><tr><td><div id='re_ip_hit' style='width:". $ip_width."px;'>".$can_hits_real."</div></td><td><div id='re_user_hit' style='width:".$user_width."px;'>".$percent."</div></td></tr></table>";
+        echo "<table id='touch_limit'><tr><td>剩余请求次数</td><td>请求增速</td></tr><tr><td><div id='re_ip_hit' >".$can_hits_real."</div></td><td><div id='re_user_hit' style='width:".$user_width."px;'>".$percent."</div></td></tr></table>";
         $f = fopen($weibo_time_add,"w");
         fwrite($f,json_encode($json_read));
         fclose($f);
@@ -63,7 +64,7 @@
         }
     }
     else{
-        echo "<table id='touch_limit'><tr><td>剩余请求次数</td><td>请求增速</td></tr><tr><td><div id='re_ip_hit_red' style='width:". $ip_width."px;'>".$can_hits_real."</div></td><td><div id='re_user_hit_red' style='width:".$user_width."px;'>".$percent."</div></td></tr></table>";
+        echo "<table id='touch_limit'><tr><td>剩余请求次数</td><td>请求增速</td></tr><tr><td><div id='re_ip_hit_red' >".$can_hits_real."</div></td><td><div id='re_user_hit_red' style='width:".$user_width."px;'>".$percent."</div></td></tr></table>";
         $f = fopen($weibo_time_add,"w");
         fwrite($f,json_encode($json_read));
         fclose($f);

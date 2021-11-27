@@ -151,6 +151,20 @@ body{
     border-left: 4px solid #bdde2d;
 }
 
+#touch_limit{
+    width: 90%;
+    text-align: center;
+}
+
+#touch_limit td{
+    border:1px solid #344349;
+    width: 50%;
+}
+
+#re_user_hit_red{
+    background-image: linear-gradient(to right, red, rgba(255, 0, 0, 0));
+}
+
 /* 日志区域样式 */
 
 #col2{
@@ -362,6 +376,26 @@ body{
 .wp-block-quote{
     border: 1px solid #344349;
     padding: 10px;
+}
+
+.post_words iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.wp-block-embed{
+    text-indent: 0;
+}
+
+.wp-block-embed blockquote{
+    display: none;
+}
+
+.col .wp-block-embed .wp-embedded-content{
+    position: relative;
+    width: 100%;
+    height: 217px;
+    aspect-ratio: unset;
 }
 
 .col .post_bottom_cover{
