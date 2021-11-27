@@ -20,10 +20,9 @@ https://cn.wordpress.org/download/#download-install
 https://wordpress.org/support/article/how-to-install-wordpress/  
 中文  
 https://cn.wordpress.org/support/article/how-to-install-wordpress/  
-在安装并能成功运行WordPress后，进入下方文件夹  
-wordpress\wp-content\themes\  
-运行代码  
+在安装并能成功运行WordPress后，进入下方文件夹并运行代码  
 ```
+wordpress\wp-content\themes\ 
 git clone https://github.com/alucardwind/BlackCooler.git
 ```
 在使用中请尽量获取最新版本的代码  
