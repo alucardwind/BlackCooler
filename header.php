@@ -26,6 +26,7 @@ require 'saetv2.ex.class.php';
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
     <!-- 加载主题CSS -->
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/main.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/mobile.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/single.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/page.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/plug_in.css" type="text/css" media="screen"/>

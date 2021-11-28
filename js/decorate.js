@@ -188,6 +188,7 @@ function title_decorate( select = ".col #title") {
 function cats_decorate() {
     let li_num = $(".col #get_cats ul li").length;
     let ul_padding = $(".col #get_cats ul").css("padding-left");
+    if (!ul_padding) {return;}
     ul_padding = parseInt(ul_padding.replace("px", ""));
     let ul_width = $(".col #get_cats ul").width();
     let li_width = Math.floor((ul_width - ul_padding) / li_num);

@@ -188,3 +188,30 @@ function control_embed() {
         $(this).removeAttr('height');
     });
 }
+
+function control_catbar() {
+    let li = $('.mobile_row #get_cats ul li');
+    let ul_width = $('.mobile_row #get_cats ul').width();
+    let li_width = Math.floor(ul_width / li.length);
+    li.each(function () {
+        $(this).width(li_width);
+    });
+}
+
+function mobile_control_sidebar() {
+    let row_width = $('.mobile_row').width();
+    let widget = $('.mobile_row #sidebar .widget');
+    let widget_width = (row_width - 10) / 2;
+    let i = 1;
+    widget.each(function () {
+        $(this).css('width', widget_width);
+        if (i % 2 == 1) {
+            $(this).css('margin-right', '10px');
+        }
+        i++;
+    });
+    let h2 = document.createElement('h2');
+    h2.className = 'sidebar_title';
+    h2.innerHTML = '侧边栏';
+    $('#mobile_row2').prepend(h2);
+}

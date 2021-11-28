@@ -1,0 +1,167 @@
+
+
+.mobile_row{
+    padding: 0 10px 10px 10px;
+    display: flow-root;
+}
+
+/* 标题行 */
+
+.mobile_row #title{
+    float: left;
+}
+
+.mobile_row #name a{
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+    -webkit-text-stroke: 2px #b7c0c1;
+    letter-spacing: 2px;
+}
+
+.mobile_row #info{
+    line-height: 2em;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/*日志行*/
+
+#mobile_row1{
+    padding-bottom: 0;
+}
+
+.mobile_row #get_cats{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.mobile_row #get_cats ul{
+    display: flex;
+    width: 100%;
+    border: 1px solid #344349;
+}
+
+.mobile_row #get_cats ul li{
+    display: inline;
+    border-left: 1px dashed #344349;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.mobile_row #get_cats ul li:first-child{
+    border-left: none;
+}
+
+.mobile_row .post_words{
+    border: 1px solid #344349;
+    margin-bottom: 10px;
+}
+
+.mobile_row .post_info{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.mobile_row .post_info a{
+    color: white;
+    font-weight: bold;
+}
+
+.mobile_row .post_title{
+    font-size: 1.2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #344349;
+    text-align: center;
+}
+
+.mobile_row .post_title a{
+    color: #bdde2d;
+}
+
+.mobile_row .post_content{
+    padding: 10px 20px 10px 20px;
+    text-indent: 2em;
+    line-height: 1.8em;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.mobile_row .post_content p{
+    padding-bottom: 1em;
+}
+
+.mobile_row .wp-block-image{
+    text-indent: 0;
+    margin: 0 0 5px 0;
+    box-sizing: border-box;
+}
+
+.mobile_row .wp-block-image figure{
+    margin: 0;
+    border: 1px solid #344349;
+}
+
+.mobile_row .wp-block-image .alignleft{
+    margin-right: 10px;
+}
+
+.mobile_row .wp-block-image .alignright{
+    margin-left: 10px;
+}
+
+.mobile_row .wp-block-image img{
+    object-fit: contain;
+}
+
+.mobile_rowl .wp-block-image figcaption{
+    text-align: center;
+    margin: 0;
+}
+
+.mobile_row .sign{
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+/*侧边栏行*/
+
+.mobile_row .sidebar_title{
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 2px;
+    border: 1px solid #344349;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.mobile_row #sidebar .widget{
+    float: left;
+    display: flow-root;
+    margin-bottom: 10px;
+    border: 1px solid #344349;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.mobile_row #sidebar .widget h2{
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 2px;
+}
+
+.mobile_row #sidebar .widget ul li{
+    display: block;
+}
