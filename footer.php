@@ -12,6 +12,7 @@
                 fit_all_functions();
                 control_catbar();
                 mobile_control_sidebar();
+                mobile_decorate();
             });
         </script>
     <?php endif; ?>

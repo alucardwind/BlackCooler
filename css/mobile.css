@@ -1,4 +1,10 @@
+@charset "UTF-8";
 
+/* 全局样式 */
+
+body{
+    --mobile_post_height: 300px;
+}
 
 .mobile_row{
     padding: 0 10px 10px 10px;
@@ -7,15 +13,24 @@
 
 /* 标题行 */
 
+#mobile_row0{
+    display: flex;
+    align-items: flex-end;
+}
+
 .mobile_row #title{
-    float: left;
+    width: 50%;
+}
+
+.mobile_row #name{
+    text-align: center;
 }
 
 .mobile_row #name a{
     color: black;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bolder;
-    -webkit-text-stroke: 2px #b7c0c1;
+    -webkit-text-stroke: 1px #b7c0c1;
     letter-spacing: 2px;
 }
 
@@ -23,6 +38,13 @@
     line-height: 2em;
     letter-spacing: 1px;
     text-align: center;
+}
+
+.mobile_row #owner{
+    width: 50%;
+    font-size: 0.8em;
+    text-align: right;
+    letter-spacing: 1px;
 }
 
 /*日志行*/
@@ -54,9 +76,15 @@
     border-left: none;
 }
 
+.mobile_row .post{
+    height: var(--mobile_post_height);
+}
+
 .mobile_row .post_words{
     border: 1px solid #344349;
     margin-bottom: 10px;
+    height: var(--mobile_post_height);
+    overflow: hidden;
 }
 
 .mobile_row .post_info{
@@ -130,6 +158,15 @@
     text-align: right;
 }
 
+.mobile_row .readmore{
+    width: 100%;
+    width: -webkit-fill-available;
+    bottom: 0;
+    height: 60px;
+    line-height: 4em;
+    margin: 0 10px 0 10px;
+}
+
 /*侧边栏行*/
 
 .mobile_row .sidebar_title{
@@ -142,6 +179,10 @@
     border: 1px solid #344349;
     clear: both;
     margin-bottom: 10px;
+}
+
+.mobile_row #sidebar{
+    display: none;
 }
 
 .mobile_row #sidebar .widget{

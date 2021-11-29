@@ -738,3 +738,32 @@ function page_post_cover() {
     dat_tx.stroke();
     post.prepend(canvas);
 }
+
+function mobile_decorate() {
+    $('.mobile_row #get_cats ul').each(function () {
+        let width = $(this).outerWidth();
+        let height = $(this).outerHeight();
+        let canvas = creat_canvas("page_post_cover", width, height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.scale(2,2);
+        dat_tx.beginPath();
+        canvas_rect(dat_tx, 0, 0, width, height, 2, '#ffffff', 1, 10);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+    $('.mobile_row .post_words').each(function () {
+        let width = $(this).outerWidth();
+        let height = $(this).outerHeight();
+        let canvas = creat_canvas("page_post_cover", width, height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.scale(2,2);
+        dat_tx.beginPath();
+        canvas_rect(dat_tx, 0, 0, width, height, 2, '#ffffff', 1, 10);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+}

@@ -37,8 +37,16 @@
     text-align: left;
 }
 
+.mobile_row #bili_form{
+    width: 100%;
+}
+
 .row #bilibili{
     width: 98%;
+}
+
+.mobile_row #bilibili{
+    width: 100%;
 }
 
 .row #bili_form{

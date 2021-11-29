@@ -9,6 +9,7 @@
 			<?php bloginfo('description'); ?>
         </div>
     </div>
+    <?php rol_copyright(); ?>
 </div>
 <div id="mobile_row1" class="mobile_row">
     <div id="get_cats">
@@ -21,7 +22,10 @@
 			?>
         </ul>
     </div>
-	<?php while (have_posts()) : the_post(); ?>
+	<?php
+        while (have_posts()) : the_post();
+        if (!is_sticky()) :
+    ?>
         <div class="post_words">
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
                 <div class="post_info">
@@ -40,8 +44,14 @@
 					<?php the_author(); ?></strong>创作于<?php the_time('Y.m.jS') ?>
                 </div>
             </div>
+            <div class="readmore">
+                <a href="<?php the_permalink() ?>" rel="bookmark"
+                   title="进入单页的 <?php the_title(); ?>">
+                    点击进入完整文章
+                </a>
+            </div>
         </div>
-		<?php comments_template('/comments.php', true);
+		<?php  endif;
 	endwhile; ?>
 </div>
 <div id="mobile_row2" class="mobile_row">

@@ -20,6 +20,7 @@ body{
     --col0_width: 215px;
     --sidebar_width: 250px;
     --posttitle_width: 230px;
+    --post_height: 1000px;
     font-size: 15px;
     background-color: black;
 }
@@ -45,7 +46,7 @@ body{
 .col #title{
     writing-mode: vertical-lr;
     border: 1px solid #344349;
-    padding: 0px 20px 30px 10px;
+    padding: 0 20px 30px 10px;
     position: relative;
     float: right;
 }
@@ -245,6 +246,14 @@ body{
     padding-left: 5px;
 }
 
+.col .post{
+    height: var(--post_height);
+}
+
+.col .sticky{
+    height: auto;
+}
+
 .col .post_words{
     margin-top: 10px;
     border-bottom: 1px solid #344349;
@@ -254,7 +263,7 @@ body{
     position: relative;
     padding: 20px 15px 20px 40px;
     display: flow-root;
-    max-height: 1000px;
+    max-height: var(--post_height);
     overflow: hidden;
 }
 
@@ -327,7 +336,7 @@ body{
     white-space: pre-wrap;/*代码段自动换行*/
     word-wrap: break-word;
     word-break: break-word;
-    padding: 5px 0px 5px 35px;
+    padding: 5px 0 5px 35px;
     background-color: rgba(0, 0, 0, 0.5);
     border-top: 1px solid #bdde2d;
     text-indent: 0;
@@ -409,15 +418,21 @@ body{
 }
 
 .readmore{
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
     position: absolute;
     width: 343px;
-    height: 50px;
-    top: 953px;
+    height: 100px;
+    /*top: 953px;*/
+    bottom: -22px;
     text-indent: 0;
     text-align: center;
-    line-height: 5em;
+    line-height: 6em;
     vertical-align: bottom;
+    z-index: 2;
+}
+
+.post_bottom_cover{
+    z-index: 3 !important;
 }
 
 .col #zhiding{

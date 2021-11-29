@@ -55,6 +55,7 @@ function check_client_width(bcw) {
     else if (bcw >= new_middle_screen_width){
         ds = 4
     }
+    console.log(ds);
     if(!GetQueryString("ds") || GetQueryString("ds") != ds){
         window.location.href = changeURLArg(window.location.href, 'ds', ds)
     }
@@ -213,5 +214,12 @@ function mobile_control_sidebar() {
     let h2 = document.createElement('h2');
     h2.className = 'sidebar_title';
     h2.innerHTML = '侧边栏';
+    $(h2).on('click', function () {
+        display_sidebar();
+    });
     $('#mobile_row2').prepend(h2);
+}
+
+function display_sidebar() {
+    $('.mobile_row #sidebar').toggle('fast','linear');
 }
