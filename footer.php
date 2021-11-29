@@ -1,7 +1,4 @@
-<script>
-    let body_clientWidth = document.body.clientWidth;
-    check_client_width(body_clientWidth);
-</script>
+
 <?php if (is_home() || is_paged() || is_archive() || is_search()) :
     if ($_GET['ds'] == 1) :?>
         <script>

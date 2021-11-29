@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 <body>
+<script>
+    let body_clientWidth = document.body.clientWidth;
+    check_client_width(body_clientWidth);
+</script>
 <div id="page">
 <?php
 if (isset($_GET['ds'])){
@@ -12,6 +16,9 @@ if (isset($_GET['ds'])){
     else{
         get_content('pc');
     }
+}
+else {
+    echo '网站不兼容IE浏览器<br>website Not compatible with IE(Internet Explorer) browser';
 }
 get_footer();
 ?>
