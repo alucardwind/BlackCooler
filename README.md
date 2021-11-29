@@ -1,5 +1,7 @@
 # BlackCooler
 本代码库是一个基于WordPress的主题。***请注意！主题不兼容IE(Internet Explorer)浏览器***，请酌情使用  
+***BlackCooler Not compatible with IE(Internet Explorer) browser***  
+  
 可以直接点击链接查看  
 https://www.redonleft.com/  
 
