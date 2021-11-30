@@ -1,4 +1,4 @@
-<div id="mobile_row0" class="mobile_row">
+<div id="mobile_row0" class="mobile_row mobile_single_row">
     <div id="title">
         <div id="name">
             <a href="<?php echo esc_url(home_url('/')); ?>"
@@ -9,16 +9,10 @@
 			<?php bloginfo('description'); ?>
         </div>
     </div>
-    <?php rol_copyright(); ?>
+	<?php rol_copyright(); ?>
 </div>
-<div id="mobile_row1" class="mobile_row">
-    <div id="page_bar">
-		<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
-    </div>
-	<?php
-        while (have_posts()) : the_post();
-        if (!is_sticky()) :
-    ?>
+<div id="mobile_row1" class="mobile_row mobile_single_row">
+	<?php while (have_posts()) : the_post(); ?>
         <div class="post_words">
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
                 <div class="post_info">
@@ -37,16 +31,11 @@
 					<?php the_author(); ?></strong>创作于<?php the_time('Y.m.jS') ?>
                 </div>
             </div>
-            <div class="readmore">
-                <a href="<?php the_permalink() ?>" rel="bookmark"
-                   title="进入单页的 <?php the_title(); ?>">
-                    点击进入完整文章
-                </a>
-            </div>
         </div>
-		<?php  endif;
+		<?php
+		comments_template('/comments.php', true);
 	endwhile; ?>
 </div>
-<div id="mobile_row2" class="mobile_row">
+<div id="mobile_row2" class="mobile_row mobile_single_row">
 	<?php get_sidebar() ?>
 </div>

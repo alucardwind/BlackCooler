@@ -740,7 +740,7 @@ function page_post_cover() {
 }
 
 function mobile_decorate() {
-    $('.mobile_row #get_cats ul').each(function () {
+    $('.mobile_row #page_bar ul').each(function () {
         let width = $(this).outerWidth();
         let height = $(this).outerHeight();
         let canvas = creat_canvas("page_post_cover", width, height);
@@ -764,6 +764,57 @@ function mobile_decorate() {
         dat_tx.beginPath();
         canvas_rect(dat_tx, 0, 0, width, height, 2, '#ffffff', 1, 10);
         dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+    $('.mobile_single_row .post_words').each(function () {
+        let width = $(this).outerWidth();
+        let height = $(this).outerHeight();
+        let canvas = creat_canvas("page_single_post_cover", width, height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.scale(2,2);
+        dat_tx.beginPath();
+        canvas_rect(dat_tx, 5, 5, width - 10, height - 10, 2, '#bdde2d', 1, 5);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+    $('.mobile_row .comments').each(function () {
+        let width = $(this).outerWidth();
+        let height = $(this).outerHeight();
+        let canvas = creat_canvas("page_post_cover", width, height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.scale(2,2);
+        dat_tx.beginPath();
+        canvas_rect(dat_tx, 0, 0, width, height, 2, '#ffffff', 1, 10);
+        dat_tx.stroke();
+        $(this).prepend(canvas);
+    });
+    $('.mobile_page_row .post_words').each(function () {
+        $(this).find('.page_post_cover').remove();
+        $(this).find('.page_single_post_cover').remove();
+        let width = $(this).outerWidth();
+        let height = $(this).outerHeight();
+        let canvas = creat_canvas("page_post_cover", width, height);
+        $(canvas).css("position", "absolute");
+        $(canvas).css("inset", "0px");
+        let dat_tx = canvas.getContext("2d");
+        dat_tx.scale(2,2);
+        dat_tx.beginPath();
+        dat_tx.arc(10,10,5,0,2*Math.PI);
+        dat_tx.fillStyle = '#bdde2d'
+        dat_tx.fill();
+        dat_tx.beginPath();
+        dat_tx.arc(width - 10,10,5,0,2*Math.PI);
+        dat_tx.fill();
+        dat_tx.beginPath();
+        dat_tx.arc(width - 10,height - 10,5,0,2*Math.PI);
+        dat_tx.fill();
+        dat_tx.beginPath();
+        dat_tx.arc(10,height - 10,5,0,2*Math.PI);
+        dat_tx.fill();
         $(this).prepend(canvas);
     });
 }

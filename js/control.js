@@ -55,7 +55,6 @@ function check_client_width(bcw) {
     else if (bcw >= new_middle_screen_width){
         ds = 4
     }
-    console.log(ds);
     if(!GetQueryString("ds") || GetQueryString("ds") != ds){
         window.location.href = changeURLArg(window.location.href, 'ds', ds)
     }
@@ -190,9 +189,9 @@ function control_embed() {
     });
 }
 
-function control_catbar() {
-    let li = $('.mobile_row #get_cats ul li');
-    let ul_width = $('.mobile_row #get_cats ul').width();
+function control_pagebar() {
+    let li = $('.mobile_row #page_bar ul li');
+    let ul_width = $('.mobile_row #page_bar ul').width();
     let li_width = Math.floor(ul_width / li.length);
     li.each(function () {
         $(this).width(li_width);

@@ -53,18 +53,18 @@ body{
     padding-bottom: 0;
 }
 
-.mobile_row #get_cats{
+.mobile_row #page_bar{
     list-style: none;
     margin-bottom: 10px;
 }
 
-.mobile_row #get_cats ul{
+.mobile_row #page_bar ul{
     display: flex;
     width: 100%;
     border: 1px solid #344349;
 }
 
-.mobile_row #get_cats ul li{
+.mobile_row #page_bar ul li{
     display: inline;
     border-left: 1px dashed #344349;
     padding: 10px;
@@ -72,7 +72,7 @@ body{
     text-align: center;
 }
 
-.mobile_row #get_cats ul li:first-child{
+.mobile_row #page_bar ul li:first-child{
     border-left: none;
 }
 
@@ -85,6 +85,10 @@ body{
     margin-bottom: 10px;
     height: var(--mobile_post_height);
     overflow: hidden;
+}
+
+.mobile_single_row .post, .mobile_single_row .post_words{
+    height: auto;
 }
 
 .mobile_row .post_info{
@@ -102,10 +106,14 @@ body{
     font-size: 1.2em;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     background: #344349;
     text-align: center;
+}
+
+.mobile_single_row .post_title{
+    background: none;
 }
 
 .mobile_row .post_title a{
@@ -167,7 +175,50 @@ body{
     margin: 0 10px 0 10px;
 }
 
-/*侧边栏行*/
+.mobile_row .comments{
+    border: 1px solid #344349;
+    display: flow-root;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.mobile_row #reply-title{
+    font-size: 1.1em;
+}
+
+.mobile_row .call_name, .mobile_row .call_text{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.mobile_row .call_name{
+    text-align: right;
+}
+
+.mobile_row .call_text{
+    padding-left: 10px;
+}
+
+.mobile_row .call_name input{
+    background: none;
+    border: 1px solid #344349;
+    width: 100px;
+}
+
+.mobile_row .call_text textarea{
+    background: none;
+    border: 1px solid #344349;
+    width: 160px;
+}
+
+.mobile_row .call_text #submit{
+    background: none;
+    border: 1px solid #344349;
+    padding: 5px;
+}
+
+    /*侧边栏行*/
 
 .mobile_row .sidebar_title{
     color: white;
