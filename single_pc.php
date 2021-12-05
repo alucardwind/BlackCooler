@@ -9,6 +9,10 @@
             <?php bloginfo('description'); ?>
         </div>
     </div>
+	<?php
+	rol_player(array('type' => 'netease'));
+	rol_copyright();
+	?>
 </div>
 <div id="single_row1" class="row">
     <?php while (have_posts()) : the_post(); ?>

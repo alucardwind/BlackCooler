@@ -11,13 +11,16 @@
 
 #single_row0{
     margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .row #title{
     padding: 10px 0 20px 0;
     border: 1px solid #344349;
     position: relative;
-    float: left;
+    /*width: 50%;*/
+    /*float: left;*/
 }
 
 .row #name{
@@ -37,6 +40,20 @@
     text-align: center;
     padding: 20px 0 10px 0;
     background-image: linear-gradient(to right, rgba(18, 53, 68, 0) 10%, rgba(18, 53, 68, 0.64) 20%, rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
+}
+
+.row #owner{
+    /*width: 25%;*/
+    font-size: 0.8em;
+    text-align: right;
+    letter-spacing: 1px;
+    /*float: right;*/
+}
+
+.row .aplayer{
+    float: none;
+    width: auto;
+    margin: 0;
 }
 
 /* 日志栏 */

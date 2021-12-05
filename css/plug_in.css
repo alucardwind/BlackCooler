@@ -170,3 +170,7 @@
     padding: 10px;
 }
 
+.page_navi .current{
+    font-weight: bold;
+    font-size: 1.1em;
+}
