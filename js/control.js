@@ -129,7 +129,7 @@ function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-ima
         $(this).find('img').removeAttr('width');
         $(this).find('img').removeAttr('height');
         $(this).find('img').width(img_width);
-        $(this).find('img').height(img_width);
+        // $(this).find('img').height(img_width);
     });
 }
 

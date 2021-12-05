@@ -323,12 +323,17 @@ body{
 }
 
 .col .wp-block-image img{
-    object-fit: contain;
+    object-fit: cover;
+    aspect-ratio: 16/9;
 }
 
 .col .wp-block-image figcaption{
     text-align: center;
     margin: 0;
+}
+
+.wp-block-image .aligncenter>figcaption, .wp-block-image .alignleft>figcaption, .wp-block-image .alignright>figcaption {
+    display: block !important;
 }
 
 .wp-block-code{
