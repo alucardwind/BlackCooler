@@ -5,6 +5,7 @@
     check_client_width(body_clientWidth);
 </script>
 <div id="page">
+    <div id="black_cover"></div>
 <?php
 if (isset($_GET['ds'])){
     if ($_GET['ds'] == 0){

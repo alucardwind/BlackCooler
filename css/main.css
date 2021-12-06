@@ -37,6 +37,16 @@ body{
 
 /* 标题区域样式 */
 
+#black_cover{
+    position: fixed;
+    background: black;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 #col0{
     width: var(--col0_width);
     padding-right: 5px;

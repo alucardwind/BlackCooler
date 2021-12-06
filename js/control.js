@@ -222,3 +222,7 @@ function mobile_control_sidebar() {
 function display_sidebar() {
     $('.mobile_row #sidebar').toggle('fast','linear');
 }
+
+function close_black() {
+    $('#black_cover').fadeOut('slow');
+}

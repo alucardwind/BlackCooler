@@ -5,6 +5,7 @@
     check_client_width(body_clientWidth);
 </script>
 <div id="page">
+    <div id="black_cover"></div>
     <?php
     if (isset($_GET['ds'])){
         if ($_GET['ds'] == 0){
@@ -16,6 +17,9 @@
         else{
             get_single('pc');
         }
+    }
+    else {
+	    echo '网站不兼容IE浏览器<br>website Not compatible with IE(Internet Explorer) browser';
     }
     get_footer();
     ?>

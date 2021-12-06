@@ -33,8 +33,9 @@ if (is_single() && $_GET['ds'] != 1) :
             control_img('.row .post_words', '.row .wp-block-image', 4);
             fit_all_functions();
             display_readmore();
-            show_single_decorate();
             change_sidebar();
+            // document.window.stop();
+            show_single_decorate();
         });
     </script>
 <?php
@@ -51,3 +52,8 @@ if (is_page() && $_GET['ds'] != 1) :
         });
     </script>
 <?php endif; ?>
+<script>
+    $(document).ready(function () {
+        close_black();
+    });
+</script>

@@ -16,7 +16,7 @@ function get_content( $name = null ) {
     if ( '' !== $name ) {
         $templates[] = "content/content_{$name}.php";
     }
-    $templates[] = 'content/content.php';
+    else {$templates[] = 'content/content.php';}
     locate_template( $templates, true, false);
 }
 
