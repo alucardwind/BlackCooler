@@ -13,16 +13,19 @@ https://www.redonleft.com/
 ## 安装
 需先行安装WordPress  
 如果不会，请参照
-### 下载  
+```
+WordPress下载  
 英文  
 https://wordpress.org/download/#download-install  
 中文  
 https://cn.wordpress.org/download/#download-install
-### 安装  
+WordPress安装  
 英文  
 https://wordpress.org/support/article/how-to-install-wordpress/  
 中文  
 https://cn.wordpress.org/support/article/how-to-install-wordpress/  
+```
+  
 在安装并能成功运行WordPress后，进入下方文件夹并运行代码  
 ```
 wordpress\wp-content\themes\ 
