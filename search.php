@@ -1,7 +1,5 @@
-<?php
-get_header();
-?>
-<body>
+<?php get_header(); ?>
+
 <div id="page">
     <div id="black_cover"></div>
 	<?php

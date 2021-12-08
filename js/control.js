@@ -4,6 +4,7 @@ const old_middle_screen_width = 1323;
 const new_middle_screen_width = 1871;
 const single_max_width = 1640;
 const single_min_width = 825;
+let body_clientWidth;
 
 function fit_all_functions() {
     fix_code();
@@ -129,7 +130,72 @@ function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-ima
         $(this).find('img').removeAttr('width');
         $(this).find('img').removeAttr('height');
         $(this).find('img').width(img_width);
-        // $(this).find('img').height(img_width);
+        $(this).find('figure').width(img_width);
+        $(this).find('figure').height(img_width / 16 * 9);
+        show_big_img(this);
+    });
+}
+
+function show_big_img(element) {
+    let screen_heigth = document.documentElement.clientHeight;//在html5规范中，应用documentElement来获取浏览器高度
+    $(element).find('img').mouseenter(function () {
+        let img = this;
+        let img_src = $(img).attr('src');
+        let img_width = img.naturalWidth;
+        let img_height = img.naturalHeight;
+        if (!img_width || !img_height) {
+            return;
+        }
+        let bili = img_height / img_width;
+        let pos = img.getBoundingClientRect();
+        let img_small_width = pos.width;
+        let x = 0;
+        let y = 0;
+        if (pos.left + img_small_width /2 > body_clientWidth / 2) {
+            x = pos.left - img_width - 30;
+            if (x < 40) {
+                x = 40;
+            }
+            img_width = pos.left - 40 - x;
+        }
+        else {
+            x = pos.right + 40;
+            if (x + img_width > body_clientWidth - 40){
+                img_width = body_clientWidth - 60 - x;
+            }
+        }
+        img_height = img_width * bili;
+        if (img_height >= screen_heigth - 40) {
+            img_height = screen_heigth - 40;
+            img_width = img_height / bili;
+        }
+        if (pos.top < 40) {
+            y = 40;
+        }
+        else if (pos.top + img_height > screen_heigth - 40){
+            y = screen_heigth - img_height - 40;
+        }
+        else {
+            y = pos.top;
+        }
+        $.ajax({
+            url:'/wp-content/themes/blackcooler/ajax/ajax_show_img.php',
+            method: 'GET',
+            data:{
+                img_src:img_src,
+                imgwidth:img_width,
+                imgheight:img_height
+            },
+            success:function (result) {
+                $("#show_large_image").html(result);
+                $("#show_large_image").css("left",x+"px");
+                $("#show_large_image").css("top",y+"px");
+                $("#show_large_image").fadeIn('fast');
+            }
+        });
+    });
+    $(element).find('img').mouseleave(function () {
+        $("#show_large_image").fadeOut('fast');
     });
 }
 

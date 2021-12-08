@@ -1,3 +1,4 @@
+
 <?php if ($_GET['ds'] == 1) :?>
     <script>
         body_clientWidth = document.body.clientWidth;
@@ -34,7 +35,7 @@ if (is_single() && $_GET['ds'] != 1) :
             fit_all_functions();
             display_readmore();
             change_sidebar();
-            // document.window.stop();
+            // window.stop();
             show_single_decorate();
         });
     </script>

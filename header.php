@@ -2,7 +2,8 @@
 session_start();
 require 'saetv2.ex.class.php';
 ?>
-<!doctype html>
+<!DOCTYPE HTML>
+<html>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -35,3 +36,9 @@ require 'saetv2.ex.class.php';
     <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/decorate.js"></script>
     <?php wp_head(); ?>
 </head>
+<body>
+<script>
+    body_clientWidth = document.documentElement.clientWidth;
+    check_client_width(body_clientWidth);
+</script>
+<div id="show_large_image"></div>

@@ -97,34 +97,6 @@
     padding-bottom: 1em;
 }
 
-.row .wp-block-image{
-    text-indent: 0;
-    margin: 0 0 5px 0;
-    box-sizing: border-box;
-}
-
-.row .wp-block-image figure{
-    margin: 0;
-    border: 1px solid #344349;
-}
-
-.row .wp-block-image .alignleft{
-    margin-right: 10px;
-}
-
-.row .wp-block-image .alignright{
-    margin-left: 10px;
-}
-
-.row .wp-block-image img{
-    object-fit: contain;
-}
-
-.row .wp-block-image figcaption{
-    text-align: center;
-    margin: 0;
-}
-
 .row .wp-block-embed .wp-embedded-content{
     position: relative;
     width: 100%;
