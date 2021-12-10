@@ -332,14 +332,18 @@ body{
     margin-left: 10px;
 }
 
+.wp-block-image a{
+    line-height: 1em;
+    display: block;
+}
+
 .wp-block-image img{
     object-fit: cover;
-    /*aspect-ratio: 16/9;*/
 }
 
 .wp-block-image figcaption{
     text-align: center;
-    margin: 0;
+    margin: 0 !important;
 }
 
 .wp-block-image .aligncenter>figcaption, .wp-block-image .alignleft>figcaption, .wp-block-image .alignright>figcaption {

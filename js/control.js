@@ -132,6 +132,8 @@ function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-ima
         $(this).find('img').width(img_width);
         $(this).find('figure').width(img_width);
         $(this).find('figure').height(img_width / 16 * 9);
+    });
+    $('.col .wp-block-image').each(function () {
         show_big_img(this);
     });
 }
@@ -229,6 +231,7 @@ function control_gallery() {
     }
     block_gallery.each(function () {
         $(this).height(item_width);
+        show_big_img(this);
     });
 }
 
