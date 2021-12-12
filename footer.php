@@ -31,7 +31,7 @@ if (is_single() && $_GET['ds'] != 1) :
     <script>
         $(document).ready(function () {
             change_page_width(body_clientWidth);
-            control_img('.row .post_words', '.row .wp-block-image', 4);
+            control_img('.row .post_words', '.row figure', 4);
             fit_all_functions();
             display_readmore();
             change_sidebar();

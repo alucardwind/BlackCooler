@@ -109,29 +109,31 @@ function change_pagecol_width() {
     $('.page_col').css('width', page_width - title_width);
 }
 
-function control_img(select1 = '.col .post_words', select2 = '.col .wp-block-image', w = 2) {
+function control_img(select1 = '.col .post_words', select2 = '.col figure', w = 2) {
     let post_width = $(select1).width();
-    let img_width = post_width;
     $(select2).each(function () {
-        if ($(this).find('figure').hasClass('alignleft')) {
-            $(this).css('float', 'left');
-            img_width = post_width / w;
+        let img_width = post_width;
+        if ($(this).hasClass('wp-block-image')){
+            img_width = post_width * 2 / w - 20;
+            $(this).find('img').attr('width', img_width);
+            $(this).find('img').attr('height', img_width / 16 * 9);
+            $(this).width(img_width);
+            $(this).height(img_width / 16 * 9);
         }
-        else if ($(this).find('figure').hasClass('alignright')) {
-            $(this).css('float', 'right');
-            img_width = post_width / w;
+        else if ($(this).hasClass('alignleft') || $(this).hasClass('alignright')) {
+            img_width = post_width / w - 20;
+            $(this).find('img').attr('width', img_width);
+            $(this).find('img').attr('height', img_width / 16 * 9);
+            $(this).width(img_width);
+            $(this).height(img_width / 16 * 9);
         }
-        else {
-            $(this).find('figure').css('clear', 'both');
-            $(this).find('figure').css('margin-left', 'auto');
-            $(this).find('figure').css('margin-right', 'auto');
-            img_width = post_width * 2 / w;
+        else if ($(this).hasClass('aligncenter')) {
+            img_width = post_width * 2 / w - 20;
+            $(this).find('img').attr('width', img_width);
+            $(this).find('img').attr('height', img_width / 16 * 9);
+            $(this).width(img_width);
+            $(this).height(img_width / 16 * 9);
         }
-        $(this).find('img').removeAttr('width');
-        $(this).find('img').removeAttr('height');
-        $(this).find('img').width(img_width);
-        $(this).find('figure').width(img_width);
-        $(this).find('figure').height(img_width / 16 * 9);
     });
     $('.col .wp-block-image').each(function () {
         show_big_img(this);
