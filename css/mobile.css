@@ -104,12 +104,11 @@ body{
 
 .mobile_row .post_title{
     font-size: 1.2em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10px 10px 0;
     margin-top: 20px;
     margin-bottom: 10px;
     background: #344349;
-    text-align: center;
+    text-align: right;
 }
 
 .mobile_single_row .post_title{

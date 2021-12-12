@@ -5,7 +5,7 @@
         $('#page').width(body_clientWidth);
         $('#page').width(body_clientWidth);
         $(document).ready(function () {
-            control_img('.mobile_row .post_words', '.mobile_row .wp-block-image', 2);
+            control_img('.mobile_row .post_content', '.mobile_row figure', 2);
             fit_all_functions();
             control_pagebar();
             mobile_control_sidebar();
@@ -31,7 +31,7 @@ if (is_single() && $_GET['ds'] != 1) :
     <script>
         $(document).ready(function () {
             change_page_width(body_clientWidth);
-            control_img('.row .post_words', '.row figure', 4);
+            control_img('.row .post_content', '.row figure', 4);
             fit_all_functions();
             display_readmore();
             change_sidebar();

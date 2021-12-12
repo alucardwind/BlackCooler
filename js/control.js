@@ -109,26 +109,26 @@ function change_pagecol_width() {
     $('.page_col').css('width', page_width - title_width);
 }
 
-function control_img(select1 = '.col .post_words', select2 = '.col figure', w = 2) {
+function control_img(select1 = '.col .post_content', select2 = '.col figure', w = 2) {
     let post_width = $(select1).width();
     $(select2).each(function () {
         let img_width = post_width;
         if ($(this).hasClass('wp-block-image')){
-            img_width = post_width * 2 / w - 20;
+            img_width = post_width * 2 / w;
             $(this).find('img').attr('width', img_width);
             $(this).find('img').attr('height', img_width / 16 * 9);
             $(this).width(img_width);
             $(this).height(img_width / 16 * 9);
         }
         else if ($(this).hasClass('alignleft') || $(this).hasClass('alignright')) {
-            img_width = post_width / w - 20;
+            img_width = post_width / w;
             $(this).find('img').attr('width', img_width);
             $(this).find('img').attr('height', img_width / 16 * 9);
             $(this).width(img_width);
             $(this).height(img_width / 16 * 9);
         }
         else if ($(this).hasClass('aligncenter')) {
-            img_width = post_width * 2 / w - 20;
+            img_width = post_width * 2 / w;
             $(this).find('img').attr('width', img_width);
             $(this).find('img').attr('height', img_width / 16 * 9);
             $(this).width(img_width);
