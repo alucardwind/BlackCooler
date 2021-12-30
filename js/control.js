@@ -118,21 +118,21 @@ function control_img(select1 = '.col .post_content', select2 = '.col figure', w 
             $(this).find('img').attr('width', img_width);
             $(this).find('img').attr('height', img_width / 16 * 9);
             $(this).width(img_width);
-            $(this).height(img_width / 16 * 9);
+            $(this).find('img').height(img_width / 16 * 9);
         }
         else if ($(this).hasClass('alignleft') || $(this).hasClass('alignright')) {
             img_width = post_width / w;
             $(this).find('img').attr('width', img_width);
             $(this).find('img').attr('height', img_width / 16 * 9);
             $(this).width(img_width);
-            $(this).height(img_width / 16 * 9);
+            $(this).find('img').height(img_width / 16 * 9);
         }
         else if ($(this).hasClass('aligncenter')) {
             img_width = post_width * 2 / w;
             $(this).find('img').attr('width', img_width);
             $(this).find('img').attr('height', img_width / 16 * 9);
             $(this).width(img_width);
-            $(this).height(img_width / 16 * 9);
+            $(this).find('img').height(img_width / 16 * 9);
         }
     });
     $('.col .wp-block-image').each(function () {
@@ -141,7 +141,7 @@ function control_img(select1 = '.col .post_content', select2 = '.col figure', w 
 }
 
 function show_big_img(element) {
-    let screen_heigth = document.documentElement.clientHeight;//在html5规范中，应用documentElement来获取浏览器高度
+    let screen_height = document.documentElement.clientHeight;//在html5规范中，应用documentElement来获取浏览器高度
     $(element).find('img').mouseenter(function () {
         let img = this;
         let img_src = $(img).attr('src');
@@ -169,15 +169,15 @@ function show_big_img(element) {
             }
         }
         img_height = img_width * bili;
-        if (img_height >= screen_heigth - 40) {
-            img_height = screen_heigth - 40;
+        if (img_height >= screen_height - 40) {
+            img_height = screen_height - 40;
             img_width = img_height / bili;
         }
         if (pos.top < 40) {
             y = 40;
         }
-        else if (pos.top + img_height > screen_heigth - 40){
-            y = screen_heigth - img_height - 40;
+        else if (pos.top + img_height > screen_height - 40){
+            y = screen_height - img_height - 40;
         }
         else {
             y = pos.top;
