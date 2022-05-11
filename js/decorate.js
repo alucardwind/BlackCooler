@@ -335,7 +335,12 @@ function posttitle_decorate() {
     let posttitle_width = 0;
     let posttitle_height = 0;
     $('.col .post_title').each(function () {
-        posttitle_width = $(this).outerWidth();
+        let title_a = $(this).find("a")[0]
+        posttitle_width = $(title_a).outerWidth();
+        let paddingLeft = $(this).css("padding-left");
+        paddingLeft = paddingLeft.replace("px", "");
+        posttitle_width = parseInt(posttitle_width) + parseInt(paddingLeft)
+        $(this).width(posttitle_width);
         posttitle_height = $(this).outerHeight();
         let canvas = creat_canvas('title_bottom', posttitle_width, posttitle_height);
         $(canvas).css("position", "absolute");

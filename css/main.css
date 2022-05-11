@@ -271,7 +271,7 @@ body{
     border-right: 1px solid #344349;
     background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 25%,rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
     position: relative;
-    padding: 20px 15px 20px 40px;
+    padding: 20px 20px 20px 40px;
     display: flow-root;
     max-height: var(--post_height);
     overflow: hidden;
@@ -281,6 +281,7 @@ body{
     float: left;
     padding: 0 0 0 10px;
     border-right: 2px solid #bdde2d;
+    margin-bottom: 10px;
 }
 
 .post_info a{
