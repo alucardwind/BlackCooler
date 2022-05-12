@@ -25,6 +25,20 @@ body{
     background-color: black;
 }
 
+body::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #bdde2d;
+    border-radius: 5px;
+}
+
 #page{
     margin: 20px auto 20px auto;
     width: max-content;
