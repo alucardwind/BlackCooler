@@ -283,7 +283,7 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 1px solid #344349;
     border-left: 1px solid #344349;
     border-right: 1px solid #344349;
-    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 25%,rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0));
+    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 15%,rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0) 90%);
     position: relative;
     padding: 20px 20px 20px 40px;
     display: flow-root;
