@@ -22,9 +22,9 @@ require 'saetv2.ex.class.php';
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <!-- 加载APlayer -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/Meting.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.9.1/APlayer.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.9.1/APlayer.min.js"></script>
     <!-- 加载主题CSS -->
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/main.css?ver=1.1" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/mobile.css" type="text/css" media="screen"/>
