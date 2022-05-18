@@ -20,14 +20,14 @@
         <li id="aplayer_li" class="widget">
             <h2 class="widgettitle">音乐播放器控制</h2>
             <ul id="aplayer" class="toggle_display">
-                播放器位于屏幕左下角<br />默认网易云音乐<br />可通过提交歌单ID变更播放列表
+                播放器位于屏幕左下角<br>默认网易云音乐<br>可通过提交歌单ID变更播放列表
                 <form method="get" action="index.php">
                     <?php
                     if($_GET['ap_num']){
                         $list_num = $_GET['ap_num'];
                     }
                     else{
-                        $list_num = get_option('netease_num');;
+                        $list_num = get_option('netease_num');
                     }
                     ?>
                     <input type="number" name="ap_num" value="<?php echo $list_num; ?>"/>

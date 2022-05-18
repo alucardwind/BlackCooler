@@ -30,7 +30,7 @@
 					<?php the_content('...点这里浏览全文 »'); ?>
                 </div>
                 <div class="sign">
-					<?php the_author(); ?></strong>创作于<?php the_time('Y.m.jS') ?>
+					<strong><?php the_author(); ?></strong>创作于<?php the_time('Y.m.jS') ?>
                 </div>
             </div>
         </div>

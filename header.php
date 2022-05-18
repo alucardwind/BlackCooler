@@ -3,7 +3,7 @@ session_start();
 require 'saetv2.ex.class.php';
 ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width,initial-scale=1">

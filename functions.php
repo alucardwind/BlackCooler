@@ -14,7 +14,7 @@ function get_content( $name = null ) {
     $templates = array();
     $name      = (string) $name;
     if ( '' !== $name ) {
-        $templates[] = "content/content_{$name}.php";
+        $templates[] = "content/content_$name.php";
     }
     else {$templates[] = 'content/content.php';}
     locate_template( $templates, true, false);
@@ -24,7 +24,7 @@ function get_single( $name ) {
     $templates = array();
     $name      = (string) $name;
     if ( '' !== $name ) {
-        $templates[] = "single_{$name}.php";
+        $templates[] = "single_$name.php";
     }
     locate_template( $templates, true, false);
 }
@@ -33,7 +33,7 @@ function get_single_page( $name ) {
 	$templates = array();
 	$name      = (string) $name;
 	if ( '' !== $name ) {
-		$templates[] = "page_{$name}.php";
+		$templates[] = "page_$name.php";
 	}
 	locate_template( $templates, true, false);
 }
@@ -42,7 +42,7 @@ function get_index( $name = null ) {
 	$templates = array();
 	$name      = (string) $name;
 	if ( '' !== $name ) {
-		$templates[] = "index_{$name}.php";
+		$templates[] = "index_$name.php";
 	}
     $templates[] = 'index.php';
 	locate_template( $templates, true, false);
@@ -84,7 +84,7 @@ function get_weibo( $name = null ) {
 	$templates = array();
 	$name      = (string) $name;
 	if ( '' !== $name ) {
-		$templates[] = "weibo_{$name}.php";
+		$templates[] = "weibo_$name.php";
 	}
 	$templates[] = 'weibo.php';
 	locate_template( $templates, true, false);
