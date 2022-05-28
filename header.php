@@ -32,7 +32,7 @@ require 'saetv2.ex.class.php';
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/page.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/plug_in.css" type="text/css" media="screen"/>
     <!-- 加载主题js -->
-    <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/control.js?ver=1.1"></script>
+    <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/control.js?ver=1.3"></script>
     <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/decorate.js"></script>
     <?php wp_head(); ?>
 </head>

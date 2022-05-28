@@ -6,7 +6,7 @@
         $('#page').width(body_clientWidth);
         $(document).ready(function () {
             control_img('.mobile_row .post_content', '.mobile_row figure', 2);
-            fit_all_functions();
+            fit_all_functions();//注意fit_all_functions()的顺序，关系到功能是否有效
             control_pagebar();
             mobile_control_sidebar();
             mobile_decorate();

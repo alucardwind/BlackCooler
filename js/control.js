@@ -227,12 +227,12 @@ function fix_code() {
 function control_gallery() {
     let post_words_width = $('.post_words').width();
     let item_width = (post_words_width - 30) / 3;
-    let block_gallery = $('.blocks-gallery-item');
-    if (block_gallery.length == 0) {
-        return;
-    }
-    block_gallery.each(function () {
+    $('.blocks-gallery-item').each(function () {
         $(this).height(item_width);
+        show_big_img(this);
+    });
+    $(".wp-block-gallery .wp-block-image").each(function () {
+        $(this).css("width","");
         show_big_img(this);
     });
 }
