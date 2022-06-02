@@ -445,6 +445,9 @@ body::-webkit-scrollbar-thumb{
 
 .post_words .wp-block-gallery{
     border: none !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .col .post_bottom_cover{

@@ -1,6 +1,12 @@
-
+<script>
+    $(document).ready(function () {
+        body_clientWidth = document.documentElement.clientWidth;
+        check_client_width(body_clientWidth);
+        close_black();
+    });
+</script>
 <?php if ($_GET['ds'] == 1) :?>
-    <script>
+	<script>
         body_clientWidth = document.body.clientWidth;
         $('#page').width(body_clientWidth);
         $('#page').width(body_clientWidth);
@@ -11,10 +17,10 @@
             mobile_control_sidebar();
             mobile_decorate();
         });
-    </script>
+	</script>
 <?php endif;
 if (is_home() || is_paged() || is_archive() || is_search()) : ?>
-    <script>
+	<script>
         // 下面方法的调用顺序很重要，无论是那种情况，都应该是先改变页面宽度，
         // 再调整文章内的各种图片元素等用于最终确定高度，
         // 最后再描绘图像
@@ -23,27 +29,26 @@ if (is_home() || is_paged() || is_archive() || is_search()) : ?>
             fit_all_functions();
             show_decorate();
         });
-    </script>
+	</script>
 <?php
 endif;
 if (is_single() && $_GET['ds'] != 1) :
 	?>
-    <script>
+	<script>
         $(document).ready(function () {
             change_page_width(body_clientWidth);
             control_img('.row .post_content', '.row figure', 4);
             fit_all_functions();
             display_readmore();
             change_sidebar();
-            // window.stop();
             show_single_decorate();
         });
-    </script>
+	</script>
 <?php
 endif;
 if (is_page() && $_GET['ds'] != 1) :
 	?>
-    <script>
+	<script>
         $(document).ready(function () {
             change_page_width(body_clientWidth);
             change_pagecol_width();
@@ -51,10 +56,5 @@ if (is_page() && $_GET['ds'] != 1) :
             display_readmore();
             show_page_decorate();
         });
-    </script>
+	</script>
 <?php endif; ?>
-<script>
-    $(document).ready(function () {
-        close_black();
-    });
-</script>
