@@ -14,7 +14,6 @@
     $weibo_content_add = "wp-content/themes/blackcooler/json/weibo_content.json";
     $weibo_time_add = "wp-content/themes/blackcooler/json/weibo_time.json";
     $weibo_face = "wp-content/themes/blackcooler/json/weibo_emotions.json";
-    date_default_timezone_set("Asia/Shanghai");
     $date_now = date("Ymd");
     $hour_now = floatval(date("H"))*3600;
     $min_now = floatval(date("i"))*60;
@@ -42,7 +41,7 @@
     $percent_float = ($time_now/960 - $can_hits) * floatval(100);//以百分数展示还剩多久
     $percent = round($percent_float,0)."%";//以百分数展示还剩多久
     if($can_hits_real >= 1){
-        $c = new SaeTClientV2( '', '', '' );
+        $c = new SaeTClientV2();
         $json_read['already_hits']++;
         $ms = $c->home_timeline(1,5,0,0,0,0);
         $limit =$c->rate_limit_status();

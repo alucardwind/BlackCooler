@@ -47,7 +47,6 @@ function show_decorate() {
 
 function show_single_decorate() {
     single_title_cover();
-    // document.window.stop();
     single_post_cover();
     single_comments_cover();
 }
