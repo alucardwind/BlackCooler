@@ -3,21 +3,11 @@ session_start();
 require 'saetv2.ex.class.php';
 ?>
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-    <title>
-        <?php
-        if (is_singular()) {
-	        the_title();
-            echo '-';
-	        bloginfo('name');
-        }
-        else {bloginfo('name');}
-        ?>
-    </title>
     <!-- js库 -->
     <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/all.min.js"></script>
@@ -39,6 +29,7 @@ require 'saetv2.ex.class.php';
     ?>
 </head>
 <body>
+<?php wp_body_open(); ?>
 <script>
     body_clientWidth = document.documentElement.clientWidth;
     check_client_width(body_clientWidth);

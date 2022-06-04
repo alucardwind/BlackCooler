@@ -57,4 +57,7 @@ if (is_page() && $_GET['ds'] != 1) :
             show_page_decorate();
         });
 	</script>
-<?php endif; ?>
+<?php
+endif;
+wp_footer();
+?>

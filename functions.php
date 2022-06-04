@@ -1,6 +1,9 @@
 <?php
 //禁止使用顶部的管理员工具栏
 show_admin_bar(false);
+add_theme_support( "title-tag" );
+add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 //加入侧边栏
 function blackcooler_widgets_init() {

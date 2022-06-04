@@ -1,7 +1,7 @@
 <div class="post_words">
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
         <div class="post_info">
-	        <?php the_category(' '); ?><?php edit_post_link(__('编辑', 'blackhack'), ''); ?>
+	        <?php the_category(' '); ?><?php edit_post_link(__('编辑', 'blackcooler'), ''); ?>
         </div>
 		<div class="post_title">
             <a href="<?php the_permalink() ?>" rel="bookmark"
