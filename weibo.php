@@ -1,4 +1,4 @@
-<li id="weibo_li" class='widget'><h2 class="widgettitle">微博内容</h2>
+<li id="weibo_li" class='widget widget_block'><h2 class="widgettitle">微博内容</h2>
     <ul id="weibo">
     <?php
     function http_to_null($url){
@@ -41,7 +41,7 @@
     $percent_float = ($time_now/960 - $can_hits) * floatval(100);//以百分数展示还剩多久
     $percent = round($percent_float,0)."%";//以百分数展示还剩多久
     if($can_hits_real >= 1){
-        $c = new SaeTClientV2();
+        $c = new SaeTClientV2(  );
         $json_read['already_hits']++;
         $ms = $c->home_timeline(1,5,0,0,0,0);
         $limit =$c->rate_limit_status();
