@@ -284,11 +284,11 @@ function control_pagebar() {
 
 function mobile_control_sidebar() {
     let row_width = $('.mobile_row').width();
-    let widget = $('.mobile_row #sidebar .widget');
-    let widget_width = (row_width - 10) / 2;
+    let widget = $('.mobile_row #sidebar .widget_block');
+    let widget_width = row_width - 10;
     let i = 1;
     widget.each(function () {
-        $(this).css('width', widget_width);
+        $(this).css('width', row_width);
         if (i % 2 == 1) {
             $(this).css('margin-right', '10px');
         }

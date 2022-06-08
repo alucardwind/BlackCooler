@@ -47,6 +47,10 @@ body{
     letter-spacing: 1px;
 }
 
+.mobile_row #owner span{
+    padding-left: 10px;
+}
+
 /*日志行*/
 
 #mobile_row1{
@@ -62,6 +66,7 @@ body{
     display: flex;
     width: 100%;
     border: 1px solid #344349;
+    overflow-wrap: anywhere;
 }
 
 .mobile_row #page_bar ul li{
@@ -91,10 +96,18 @@ body{
     height: auto;
 }
 
+.mobile_row .post_top{
+    background: #344349;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
 .mobile_row .post_info{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+
 }
 
 .mobile_row .post_info a{
@@ -104,11 +117,7 @@ body{
 
 .mobile_row .post_title{
     font-size: 1.2em;
-    padding: 10px 10px 10px 0;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background: #344349;
-    text-align: right;
+
 }
 
 .mobile_single_row .post_title{

@@ -10,12 +10,12 @@ require 'saetv2.ex.class.php';
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
     <?php
     date_default_timezone_set("Asia/Shanghai");
-    wp_head();
     setcookie("is_home", is_home());
     setcookie("is_paged", is_paged());
     setcookie("is_search", is_search());
     setcookie("is_single", is_single());
     setcookie("is_page", is_page());
+    wp_head();
     ?>
 </head>
 <body>

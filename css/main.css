@@ -41,8 +41,9 @@ body::-webkit-scrollbar-thumb{
 
 #page{
     margin: 20px auto 20px auto;
-    width: max-content;
+    /*width: max-content;*/
     display: flow-root;
+    max-width: max-content;
 }
 
 .col{
@@ -227,8 +228,22 @@ body::-webkit-scrollbar-thumb{
     height: 35px;
     width: 200px;
     border: 1px solid #344349;
-    background: none;
+    background: black;
     color: white;
+}
+
+.col #get_archives select::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.col #get_archives select::-webkit-scrollbar-track{
+    background-color: black;
+}
+
+.col #get_archives select::-webkit-scrollbar-thumb{
+    background-color: #bdde2d;
+    border-radius: 5px;
 }
 
 .col #get_cats{

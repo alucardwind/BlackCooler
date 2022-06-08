@@ -20,6 +20,7 @@
 .lwa input{
     background: none;
     border: 1px solid #344349;
+    padding: 5px;
 }
 
 #lwa_wp-submit{
@@ -63,6 +64,7 @@
 #aplayer_li input{
     background: none;
     border: 1px solid #344349;
+    padding: 5px;
 }
 
 /*网易播放器*/
