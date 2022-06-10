@@ -252,10 +252,11 @@ function control_gallery() {
 
 function control_media_text() {
     $('.wp-block-media-text').each(function () {
-        let img = $(this).find('img');
+        let img = $(this).find('img')[0];
         let words_height = $(this).children('.wp-block-media-text__content').height();
         $(img).removeAttr('width');
         $(img).attr('height',words_height);
+        $(img).css("height", words_height);
     });
 }
 

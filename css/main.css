@@ -349,6 +349,18 @@ body::-webkit-scrollbar-thumb{
     margin-left: auto;
 }
 
+.post_words ul{
+
+}
+
+.post_words ul li{
+    list-style: none;
+    border-left: 4px solid #bdde2d;
+    border-right: 1px solid #bdde2d;
+    margin-bottom: 5px;
+    background: black;
+}
+
 .wp-block-image{
     text-indent: 0;
     margin-bottom: 5px !important;
@@ -406,12 +418,17 @@ body::-webkit-scrollbar-thumb{
 .wp-block-media-text .wp-block-media-text__media{
     text-indent: 0;
     padding-top: 10px;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
     border-right: 1px dashed #344349;
     padding-right: 10px;
 }
 
 .has-media-on-the-right .wp-block-media-text__media{
     border-right: none;
+    border-top: none;
+    border-bottom: none;
     border-left: 1px dashed #344349;
     padding-right: 0;
     padding-left: 10px;
@@ -571,4 +588,14 @@ body::-webkit-scrollbar-thumb{
     line-height: 2em;
     padding-right: 40px;
     padding-left: 40px;
+}
+
+#post404{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
