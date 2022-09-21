@@ -41,9 +41,8 @@ body::-webkit-scrollbar-thumb{
 
 #page{
     margin: 20px auto 20px auto;
-    /*width: max-content;*/
+    width: max-content;
     display: flow-root;
-    max-width: max-content;
 }
 
 .col{
@@ -408,6 +407,10 @@ body::-webkit-scrollbar-thumb{
 .wp-block-code code{
     font-family: Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif;
     line-height: 1.2em;
+}
+
+.wp-block-video{
+    text-indent: 0;
 }
 
 .wp-block-media-text{
