@@ -10,11 +10,11 @@ require 'saetv2.ex.class.php';
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
     <?php
     date_default_timezone_set("Asia/Shanghai");
-    setcookie("is_home", is_home());
-    setcookie("is_paged", is_paged());
-    setcookie("is_search", is_search());
-    setcookie("is_single", is_single());
-    setcookie("is_page", is_page());
+    setcookie("is_home", is_home(), ['samesite' => 'Lax']);
+    setcookie("is_paged", is_paged(), ['samesite' => 'Lax']);
+    setcookie("is_search", is_search(), ['samesite' => 'Lax']);
+    setcookie("is_single", is_single(), ['samesite' => 'Lax']);
+    setcookie("is_page", is_page(), ['samesite' => 'Lax']);
     wp_head();
     ?>
 </head>
