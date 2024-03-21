@@ -39,18 +39,31 @@ function getCookie(name){
 function changeURLArg(url,arg,arg_val)
 {
     let pattern=arg+'=([^&]*)';
+    // let pattern = arg + '=';
     let replaceText=arg+'='+arg_val;
-    if(url.match(pattern)){
+    let needText = '';
+    let noJingUrl = url;
+    if (url.match('[\#]')){
+        if (url.match('[\?]') && url.indexOf('#') < url.indexOf('?')){
+            needText = url.substring(url.indexOf('#'), url.indexOf('?'))
+        }
+        else {
+            needText = url.substring(url.indexOf('#'))
+        }
+        // 注意这里的replace，xx.replace后并不能直接改写xx的值，而是需要另外赋值
+        noJingUrl = url.replaceAll(needText, "");
+    }
+    if(noJingUrl.match(pattern)){
         let tmp='/('+ arg+'=)([^&]*)/gi';
-        tmp=url.replace(eval(tmp),replaceText);
-        return tmp;
+        tmp = noJingUrl.replace(eval(tmp),replaceText);
+        return tmp + needText;
     }
     else{
-        if(url.match('[\?]')){
-            return url+'&'+replaceText;
+        if(noJingUrl.match('[\?]')){
+            return noJingUrl+'&'+replaceText + needText;
         }
         else{
-            return url+'?'+replaceText;
+            return noJingUrl+'?'+replaceText + needText;
         }
     }
 }
