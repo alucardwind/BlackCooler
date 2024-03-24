@@ -36,7 +36,7 @@ function canvas_rect(dat_tx, start_x, start_y, width, height, linewidth, color, 
 }
 
 function show_decorate() {
-    change_zhiding();
+    // change_zhiding();
     sidebar_decorate();
     title_decorate();
     cats_decorate();

@@ -129,6 +129,9 @@ body::-webkit-scrollbar-thumb{
     float: right;
     padding-top: 20px;
     text-align: right;
+    white-space: nowrap;
+    font-size: 0.9em;
+    line-height: 1.5em;
 }
 
 .col #owner span{
@@ -267,21 +270,20 @@ body::-webkit-scrollbar-thumb{
 }
 
 .col .con{
-    float: left;
-    width: 400px;
+    /*float: left;*/
+    /*width: 400px;*/
 }
 
 .col #con1{
-    padding-right: 5px;
+    display: flow-root;
 }
 
 .col #con2{
-    padding-left: 5px;
-    padding-right: 5px;
+    display: flow-root;
 }
 
 .col #con3{
-    padding-left: 5px;
+    display: flow-root;
 }
 
 .col .post{
@@ -303,6 +305,9 @@ body::-webkit-scrollbar-thumb{
     display: flow-root;
     max-height: var(--post_height);
     overflow: hidden;
+    width: 340px;
+    margin-right: 5px;
+    float: left;
 }
 
 .col .post_info{
@@ -515,7 +520,11 @@ body::-webkit-scrollbar-thumb{
 
 .col #zhiding{
     clear: both;
-    float: left;
+}
+
+#zhiding .post_words{
+    float: none;
+    width: auto;
 }
 
 #zhiding .post_bottom_cover{
