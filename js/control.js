@@ -50,7 +50,6 @@ function changeURLArg(url,arg,arg_val)
         else {
             needText = url.substring(url.indexOf('#'))
         }
-        // 注意这里的replace，xx.replace后并不能直接改写xx的值，而是需要另外赋值
         noJingUrl = url.replaceAll(needText, "");
     }
     if(noJingUrl.match(pattern)){
@@ -303,10 +302,10 @@ function mobile_control_sidebar() {
     let i = 1;
     widget.each(function () {
         $(this).css('width', row_width);
-        if (i % 2 == 1) {
-            $(this).css('margin-right', '10px');
-        }
-        i++;
+        // if (i % 2 == 1) {
+        //     $(this).css('margin-right', '10px');
+        // }
+        // i++;
     });
     let h2 = document.createElement('h2');
     h2.className = 'sidebar_title';
@@ -323,4 +322,10 @@ function display_sidebar() {
 
 function close_black() {
     $('#black_cover').fadeOut('slow');
+}
+
+function display_pagebar() {
+    $('#pagebar_title').on('click', function () {
+        $('.mobile_row #page_bar ul').toggle('fast','linear');
+    });
 }

@@ -14,12 +14,12 @@ body{
 /* 标题行 */
 
 #mobile_row0{
-    display: flex;
-    align-items: flex-end;
+    /*display: flex;*/
+    /*align-items: flex-end;*/
 }
 
 .mobile_row #title{
-    width: 50%;
+    /*width: 50%;*/
 }
 
 .mobile_row #name{
@@ -40,21 +40,55 @@ body{
     text-align: center;
 }
 
-.mobile_row #owner{
-    width: 50%;
+#owner{
     font-size: 0.8em;
-    text-align: right;
+    text-align: left;
     letter-spacing: 1px;
+    margin-left: 10px;
 }
 
-.mobile_row #owner span{
-    padding-left: 10px;
-}
+/*.mobile_row #owner span{*/
+/*    padding-left: 10px;*/
+/*}*/
 
 /*日志行*/
 
 #mobile_row1{
     padding-bottom: 0;
+}
+
+.mobile_row #pagebar_title{
+    color: black;
+    background-color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 2px;
+    border: 1px solid #344349;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.mobile_row #search_form{
+    margin-bottom: 10px;
+}
+
+.mobile_row #search_form form div{
+    display: grid;
+    grid-template-columns: auto 30px;
+    grid-column-gap: 10px;
+}
+
+.mobile_row #search_form input{
+    background-color: black;
+    color: white;
+    border: white solid 1px;
+}
+
+.mobile_row #search_form button{
+    background-color: black;
+    border: white solid 1px;
 }
 
 .mobile_row #page_bar{
@@ -63,22 +97,22 @@ body{
 }
 
 .mobile_row #page_bar ul{
-    display: flex;
     width: 100%;
-    border: 1px solid #344349;
     overflow-wrap: anywhere;
+    display: none;
 }
 
 .mobile_row #page_bar ul li{
-    display: inline;
-    border-left: 1px dashed #344349;
+    /*display: inline;*/
+    border: 1px dashed #344349;
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
+    list-style-type: none;
 }
 
 .mobile_row #page_bar ul li:first-child{
-    border-left: none;
+    /*border-left: none;*/
 }
 
 .mobile_row .post{
@@ -106,8 +140,9 @@ body{
     margin-top: 20px;
 }
 
-.mobile_row .post_info{
-
+.mobile_single_row .post_info{
+    margin-top: 15px;
+    padding-left: 10px;
 }
 
 .mobile_row .post_info a{
@@ -122,6 +157,7 @@ body{
 
 .mobile_single_row .post_title{
     background: none;
+    padding-left: 10px;
 }
 
 .mobile_row .post_title a{
@@ -186,8 +222,9 @@ body{
 .mobile_row .comments{
     border: 1px solid #344349;
     display: flow-root;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 10px;
+    /*width: 298px;*/
 }
 
 .mobile_row #reply-title{
@@ -195,13 +232,13 @@ body{
 }
 
 .mobile_row .call_name, .mobile_row .call_text{
-    float: left;
-    width: 50%;
+    /*float: left;*/
+    /*width: 50%;*/
     box-sizing: border-box;
 }
 
 .mobile_row .call_name{
-    text-align: right;
+    /*text-align: right;*/
 }
 
 .mobile_row .call_text{
@@ -211,7 +248,7 @@ body{
 .mobile_row .call_name input{
     background: none;
     border: 1px solid #344349;
-    width: 100px;
+    /*width: 100px;*/
 }
 
 .mobile_row .call_text textarea{
@@ -229,7 +266,8 @@ body{
     /*侧边栏行*/
 
 .mobile_row .sidebar_title{
-    color: white;
+    color: black;
+    background-color: white;
     font-size: 1.1em;
     font-weight: bold;
     text-align: center;
@@ -245,7 +283,6 @@ body{
 }
 
 .mobile_row #sidebar .widget{
-    float: left;
     display: flow-root;
     margin-bottom: 10px;
     border: 1px solid #344349;

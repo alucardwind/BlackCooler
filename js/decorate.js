@@ -36,7 +36,7 @@ function canvas_rect(dat_tx, start_x, start_y, width, height, linewidth, color, 
 }
 
 function show_decorate() {
-    // change_zhiding();
+    change_zhiding();
     sidebar_decorate();
     title_decorate();
     cats_decorate();
@@ -366,16 +366,18 @@ function posttitle_decorate() {
 
 function change_zhiding() {
     let zhiding = $('.col #zhiding');
-    let con_width = $('.col .con').width();
-    if (GetQueryString("ds") == 2) {
-        zhiding.width(con_width);
-    }
-    else if (GetQueryString("ds") == 3) {
-        zhiding.width(con_width * 2 + 10);
-    }
-    else if (GetQueryString("ds") == 4) {
-        zhiding.width(con_width * 3 + 20);
-    }
+    // let con_width = $('.col .con').width();
+    // if (GetQueryString("ds") == 2) {
+    //     zhiding.width(con_width);
+    // }
+    // else if (GetQueryString("ds") == 3) {
+    //     zhiding.width(con_width * 2 + 10);
+    // }
+    // else if (GetQueryString("ds") == 4) {
+    //     zhiding.width(con_width * 3 + 20);
+    // }
+    let con_width = $('#con1').width();
+    zhiding.width(con_width);
 }
 
 function single_title_cover() {
@@ -745,19 +747,19 @@ function page_post_cover() {
 }
 
 function mobile_decorate() {
-    $('.mobile_row #page_bar ul').each(function () {
-        let width = $(this).outerWidth();
-        let height = $(this).outerHeight();
-        let canvas = creat_canvas("page_post_cover", width, height);
-        $(canvas).css("position", "absolute");
-        $(canvas).css("inset", "0px");
-        let dat_tx = canvas.getContext("2d");
-        dat_tx.scale(2,2);
-        dat_tx.beginPath();
-        canvas_rect(dat_tx, 0, 0, width, height, 2, '#ffffff', 1, 10);
-        dat_tx.stroke();
-        $(this).prepend(canvas);
-    });
+    // $('.mobile_row #page_bar ul').each(function () {
+    //     let width = $(this).outerWidth();
+    //     let height = $(this).outerHeight();
+    //     let canvas = creat_canvas("page_post_cover", width, height);
+    //     $(canvas).css("position", "absolute");
+    //     $(canvas).css("inset", "0px");
+    //     let dat_tx = canvas.getContext("2d");
+    //     dat_tx.scale(2,2);
+    //     dat_tx.beginPath();
+    //     canvas_rect(dat_tx, 0, 0, width, height, 2, '#ffffff', 1, 10);
+    //     dat_tx.stroke();
+    //     $(this).prepend(canvas);
+    // });
     $('.mobile_row .post_words').each(function () {
         let width = $(this).outerWidth();
         let height = $(this).outerHeight();

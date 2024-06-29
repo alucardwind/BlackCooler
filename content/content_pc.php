@@ -72,7 +72,7 @@
                     $con_num++;
                     echo "<div id='con" . $con_num . "' class='con'>";
                 }
-                if ($_GET['ds'] == 4){
+                elseif ($_GET['ds'] == 4){
                     if ($bc_post_num == 3){
                         $con_num++;
                         echo "<div id='con" . $con_num . "' class='con'>";
@@ -84,11 +84,15 @@
 	                    echo "<div id='con" . $con_num . "' class='con'>";
                     }
                 }
+                elseif ($_GET['ds'] == 2){
+                    $con_num++;
+                    echo "<div id='con" . $con_num . "' class='con'>";
+                }
                 get_content();
                 if ($bc_post_num == 5){
                     echo "</div>";
                 }
-                if ($_GET['ds'] == 4){
+                elseif ($_GET['ds'] == 4){
                     if ($bc_post_num == 2){
                         echo "</div>";
                     }
@@ -97,6 +101,9 @@
                     if ($bc_post_num == 1 || $bc_post_num == 3){
 	                    echo "</div>";
                     }
+                }
+                elseif ($_GET['ds'] == 2){
+                    echo "</div>";
                 }
                 $bc_post_num++;
             }

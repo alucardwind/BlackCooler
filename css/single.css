@@ -93,9 +93,16 @@
     overflow-wrap: break-word;
 }
 
-.row .post_content p{
-    padding-bottom: 1em;
-}
+/*.row .post_content p{*/
+/*    padding-bottom: 1em;*/
+/*}*/
+
+/*.row .post_content p a{*/
+/*    color: #19a2a9;*/
+/*    border: 1px solid #344349;*/
+/*    display: block;*/
+/*    padding: 0.5em;*/
+/*}*/
 
 .row .wp-block-embed .wp-embedded-content{
     position: relative;

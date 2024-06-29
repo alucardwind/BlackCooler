@@ -5,11 +5,13 @@ $(document).ready(function () {
 });
 if (GetQueryString("ds") == 1){
     $(document).ready(function () {
+        $('#page').width(body_clientWidth);
         control_img('.mobile_row .post_content', '.mobile_row figure', 2);
         fit_all_functions();//注意fit_all_functions()的顺序，关系到功能是否有效
-        control_pagebar();
+        // control_pagebar();
         mobile_control_sidebar();
         mobile_decorate();
+        display_pagebar();
     });
 }
 else if (getCookie("is_single") == 1){

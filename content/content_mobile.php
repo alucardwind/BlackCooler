@@ -9,10 +9,14 @@
 			<?php bloginfo('description'); ?>
         </div>
     </div>
-    <?php rol_copyright(); ?>
+    
 </div>
 <div id="mobile_row1" class="mobile_row">
+    <div id="search_form">
+        <?php get_search_form()?>
+    </div>
     <div id="page_bar">
+        <h2 id="pagebar_title">页面栏</h2>
 		<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
     </div>
 	<?php
@@ -26,8 +30,7 @@
 		                <?php the_category(' '); ?><?php edit_post_link(__('编辑', 'blackcooler'), ''); ?>
                     </div>
                     <div class="post_title">
-                        <a href="<?php the_permalink() ?>" rel="bookmark"
-                           title="进入单页的 <?php the_title(); ?>">
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="进入单页的 <?php the_title(); ?>">
 			                <?php the_title(); ?>
                         </a>
                     </div>
@@ -40,8 +43,7 @@
                 </div>
             </div>
             <div class="readmore">
-                <a href="<?php the_permalink() ?>" rel="bookmark"
-                   title="进入单页的 <?php the_title(); ?>">
+                <a href="<?php the_permalink() ?>" rel="bookmark" title="进入单页的 <?php the_title(); ?>">
                     点击进入完整文章
                 </a>
             </div>
@@ -52,3 +54,4 @@
 <div id="mobile_row2" class="mobile_row">
 	<?php get_sidebar() ?>
 </div>
+<?php rol_copyright(); ?>

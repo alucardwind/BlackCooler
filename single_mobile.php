@@ -9,7 +9,7 @@
 			<?php bloginfo('description'); ?>
         </div>
     </div>
-	<?php rol_copyright(); ?>
+	
 </div>
 <div id="mobile_row1" class="mobile_row mobile_single_row">
 	<?php while (have_posts()) : the_post(); ?>
@@ -39,3 +39,4 @@
 <div id="mobile_row2" class="mobile_row mobile_single_row">
 	<?php get_sidebar() ?>
 </div>
+<?php rol_copyright(); ?>

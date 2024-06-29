@@ -16,6 +16,12 @@ a{
     z-index: 2;
 }
 
+ol{
+    border-left: 1px solid #344349;
+    list-style: decimal inside;
+    padding-left: 5px;
+}
+
 body{
     --col0_width: 215px;
     --sidebar_width: 250px;
@@ -271,7 +277,7 @@ body::-webkit-scrollbar-thumb{
 
 .col .con{
     /*float: left;*/
-    /*width: 400px;*/
+    width: max-content;
 }
 
 .col #con1{
@@ -343,8 +349,15 @@ body::-webkit-scrollbar-thumb{
     overflow-wrap: break-word;
 }
 
-.col .post_content p{
+.post_words .post_content p{
     padding-bottom: 1em;
+}
+
+.post_words .post_content p a{
+    color: #19a2a9;
+    border: 1px solid #344349;
+    display: block;
+    padding: 0.5em;
 }
 
 .post_words figure{
@@ -377,7 +390,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .wp-block-image img{
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .wp-block-image figcaption{
@@ -403,15 +416,22 @@ body::-webkit-scrollbar-thumb{
     white-space: pre-wrap;/*代码段自动换行*/
     word-wrap: break-word;
     word-break: break-word;
-    padding: 5px 0 5px 35px;
+    padding: 5px 0 5px 5px;
     background-color: rgba(0, 0, 0, 0.5);
     border-top: 1px solid #bdde2d;
     text-indent: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .wp-block-code code{
     font-family: Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif;
-    line-height: 1.2em;
+    line-height: 1.72em;
+    font-size: 0.9em;
+    padding-left: 5px;
 }
 
 .wp-block-video{
@@ -447,20 +467,24 @@ body::-webkit-scrollbar-thumb{
 }
 
 .code_list_num{
-    position: absolute;
     list-style: none;
-    top: 0;
-    left: 0;
     padding: 5px 5px 0 5px;
-    width: 20px;
+    width: 30px;
     border-right: 1px solid white;
     line-height: 1.2em;
     z-index: -2;
 }
 
+.wp-block-code ul li{
+    border-left: none;
+    border-right: none;
+}
+
 .wp-block-quote{
-    border: 1px solid #344349;
+    border-bottom: 1px solid #344349;
+    border-top: 4px solid #344349;
     padding: 10px;
+    margin-bottom: 1em;
 }
 
 .post_words iframe{

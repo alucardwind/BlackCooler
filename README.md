@@ -35,20 +35,15 @@ git clone https://github.com/alucardwind/BlackCooler.git
 请自行学习如何手动安装WordPress插件  
 [redonleft_player](https://github.com/alucardwind/redonleft_player)  
 [redonleft_copyright](https://github.com/alucardwind/redonleft_copyright)  
-
-### 关于微博插件  
-主题在wordpress插件外，另行制作了基于[微博PHP API](https://github.com/xiaosier/libweibo)的微博展示挂件  
-相关代码在weibo.php中，并在sidebar.php中调用  
-<mark>请注意！</mark> 微博外挂插件需要向新浪微博申请权限，请使用者自行申请，申请地址：https://open.weibo.com/  
-在未获得新浪微博授权时直接启用本主题会报错并显示错误。  
-基于以上情况，请使用者自行决定是否启用该功能  
-+ 如没有权限或不想使用该功能  
-请编辑文件sidebar.php，查找24行并删除下方语句
+微博插件  
+该插件的制作基于[微博PHP API](https://github.com/xiaosier/libweibo)  
+使用时请确保已经向新浪微博申请成功相关权限，申请地址https://open.weibo.com/  
+如没有权限或不想使用该功能，请编辑文件sidebar.php，查找24行并删除下方语句
 ```
 get_weibo();
 ```
 或者直接删除文件weibo.php  
-+ 如果已经拥有相关权限，请编辑文件weibo.php，查找45行并填入相关权限代码
+如果已经拥有相关权限，请编辑文件weibo.php，查找45行并填入相关权限代码
 ```
 $c = new SaeTClientV2( '权限代码1', '权限代码2', '权限代码3' );
 ```
