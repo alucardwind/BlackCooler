@@ -45,7 +45,7 @@
     $content_row = $wpdb->get_row("SELECT * FROM wp_redonleft_weibo_content WHERE ID = 4", ARRAY_A);
     
     if($can_hits_real >= 1){
-        $c = new SaeTClientV2('1916930258', 'bcfb3ba2c7fed73817113a63f3167376', '2.008N8BxByHPjFCa6f69c4d0f0xksxe');
+        $c = new SaeTClientV2();
         $hit_time_row['hit']++;
         
         $ms = $c->home_timeline(1,5,0,0,0,0);
