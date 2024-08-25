@@ -514,6 +514,24 @@ body::-webkit-scrollbar-thumb{
     flex-wrap: wrap;
 }
 
+.post_words .wp-block-details{
+    border: 1px dashed #bdde2d;
+    padding: 0 4px 0 4px;
+    margin-bottom: 1em;
+}
+
+.post_words .wp-block-details summary{
+    font-weight: bold;
+    font-style: italic;
+    color: #bdde2d;
+}
+
+.post_words .wp-block-details p{
+    font-style: italic;
+    color: #bdde2d;
+    padding-bottom: 0;
+}
+
 .col .post_bottom_cover{
     background: black;
 }
