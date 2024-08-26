@@ -532,6 +532,14 @@ body::-webkit-scrollbar-thumb{
     padding-bottom: 0;
 }
 
+.post_words .wp-block-heading{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #19a2a9;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #344349;
+}
+
 .col .post_bottom_cover{
     background: black;
 }
