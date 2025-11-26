@@ -27,6 +27,29 @@
     padding: 2px 5px 2px 5px;
 }
 
+.lwa-avatar{
+    border-right: 1px solid #344349;
+}
+
+.lwa-bones .pixelbones a{
+    font-size: 15px !important;
+    line-height: 1.8em !important;
+}
+
+.lwa-bones .pixelbones label{
+    font-size: 15px !important;
+    line-height: 1.8em !important;
+}
+
+.lwa-bones .pixelbones p a{
+    font-size: 15px !important;
+    line-height: 1.8em !important;
+}
+
+.lwa-bones .lwa.lwa-login .lwa-form .grid-container.submit {
+    grid-template-columns: 10% 1fr !important;
+}
+
 /* 视频 */
 
 #bilibili{

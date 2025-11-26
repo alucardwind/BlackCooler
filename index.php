@@ -15,7 +15,7 @@ if (isset($_GET['ds'])){
     }
 }
 else {
-    echo '网站不兼容IE浏览器<br>website Not compatible with IE(Internet Explorer) browser!';
+    echo 'Redonleft.com<br>加载页面中...';
 }
 get_footer();
 ?>

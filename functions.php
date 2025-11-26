@@ -110,3 +110,14 @@ function get_weibo( $name = null ) {
 	$templates[] = 'weibo.php';
 	locate_template( $templates, true, false);
 }
+
+function blackcooler_embed_style() {
+	wp_enqueue_style(
+		'embed-css', 
+		get_theme_file_uri('/css/embed.css'), 
+		array('wp-embed-template'), 
+		'1.0.0', 
+		'all');
+}
+
+add_action('enqueue_embed_scripts', 'blackcooler_embed_style');

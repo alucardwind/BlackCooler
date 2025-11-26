@@ -136,7 +136,7 @@ body::-webkit-scrollbar-thumb{
     padding-top: 20px;
     text-align: right;
     white-space: nowrap;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.5em;
 }
 
@@ -150,6 +150,10 @@ body::-webkit-scrollbar-thumb{
     width: var(--sidebar_width);
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.col #sidebar{
+    line-height: 1.8em;
 }
 
 .col #sidebar ul{
@@ -170,7 +174,6 @@ body::-webkit-scrollbar-thumb{
 .col #sidebar ul li ul li, .col #sidebar ul li ol li{
     text-align: center;
     display: block;
-    line-height: 2em;
     width: calc(var(--sidebar_width) - 25px);
 }
 
@@ -349,8 +352,16 @@ body::-webkit-scrollbar-thumb{
     overflow-wrap: break-word;
 }
 
-.post_words .post_content p{
-    padding-bottom: 1em;
+.post_words .post_content p,
+.post_words .post_content div,
+.post_words .post_content figure,
+.post_words .post_content details,
+.post_words .post_content pre{
+    margin-bottom: 1em;
+}
+
+.post_words .post_content figure div{
+    margin: 0;
 }
 
 .post_words .post_content p a{
@@ -380,7 +391,6 @@ body::-webkit-scrollbar-thumb{
 
 .wp-block-image{
     text-indent: 0;
-    margin-bottom: 5px !important;
     box-sizing: border-box;
 }
 
@@ -439,7 +449,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 .wp-block-media-text{
-    margin-bottom: 1em;
     border-top: 1px solid #344349;
 }
 
@@ -484,7 +493,6 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 1px solid #344349;
     border-top: 4px solid #344349;
     padding: 10px;
-    margin-bottom: 1em;
 }
 
 .post_words iframe{
@@ -494,6 +502,7 @@ body::-webkit-scrollbar-thumb{
 
 .wp-block-embed{
     text-indent: 0;
+    line-height: 1em;
 }
 
 .wp-block-embed blockquote{
@@ -503,7 +512,6 @@ body::-webkit-scrollbar-thumb{
 .col .wp-block-embed .wp-embedded-content{
     position: relative;
     width: 100%;
-    height: 217px;
     aspect-ratio: unset;
 }
 
@@ -517,7 +525,6 @@ body::-webkit-scrollbar-thumb{
 .post_words .wp-block-details{
     border: 1px dashed #bdde2d;
     padding: 0 4px 0 4px;
-    margin-bottom: 1em;
 }
 
 .post_words .wp-block-details summary{

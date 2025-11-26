@@ -1,0 +1,40 @@
+﻿.wp-embed {
+    padding: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "微软雅黑", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.8em;
+    color: #8c8f94;
+    background: #000;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    overflow: auto;
+    zoom: 1;
+}
+
+p.wp-embed-heading {
+    margin: 0 0 15px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.wp-embed a {
+    color: #8c8f94;
+    text-decoration: none;
+}
+
+.wp-embed-heading a {
+    color: #19a2a9;
+}
+
+.wp-embed-excerpt p{
+    text-indent: 2em;
+    
+}
+
+.wp-embed-footer {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+}
