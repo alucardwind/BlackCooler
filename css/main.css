@@ -503,6 +503,13 @@ body::-webkit-scrollbar-thumb{
 .wp-block-embed{
     text-indent: 0;
     line-height: 1em;
+    box-shadow: 5px 5px 4px #344349;
+
+在主要浏览器中广泛可用(Baseline 自2018年1月 起)
+了解详细信息
+
+不显示
+: 5px 5px 4px #344349;
 }
 
 .wp-block-embed blockquote{
