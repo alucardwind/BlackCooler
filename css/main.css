@@ -320,14 +320,27 @@ body::-webkit-scrollbar-thumb{
 }
 
 .col .post_info{
-    float: left;
+    float: right;
     padding: 0 0 0 10px;
     border-right: 2px solid #bdde2d;
-    margin-bottom: 10px;
+    margin: 10px 0 10px 0;
+    clear: both;
 }
 
 .post_info a{
     margin-right: 10px;
+    color: #19a2a9;
+}
+
+.col .cat_icon{
+    margin: 10px 0 0 10px;
+    font-size: 1.2em;
+    float: left;
+    color: #bdde2d;
+}
+
+.col .cat_icon svg path{
+    color: #bdde2d;
 }
 
 .col .post_title{
@@ -345,7 +358,6 @@ body::-webkit-scrollbar-thumb{
 
 .col .post_content{
     clear: both;
-    padding-top: 20px;
     text-indent: 2em;
     line-height: 1.8em;
     word-break: break-all;
