@@ -3,7 +3,7 @@
         <li class="widget widget_block">
             <h2 class="widgettitle">视频</h2>
             <?php
-            if ($_GET['bili_av']) {
+            if (array_key_exists('bili_av', $_GET)) {
             $bili_av = $_GET['bili_av'];
             } else {
             $bili_av = get_option('bilibili_num');
@@ -23,7 +23,7 @@
                 播放器位于屏幕左下角<br>默认网易云音乐<br>可通过提交歌单ID变更播放列表
                 <form method="get" action="index.php">
                     <?php
-                    if($_GET['ap_num']){
+                    if(array_key_exists('ap_num', $_GET)){
                         $list_num = $_GET['ap_num'];
                     }
                     else{
