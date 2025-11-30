@@ -308,7 +308,6 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 1px solid #344349;
     border-left: 1px solid #344349;
     border-right: 1px solid #344349;
-    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0) 15%,rgba(18, 53, 68, 0.64) 50%, rgba(18, 53, 68, 0) 90%);
     position: relative;
     padding: 20px 20px 20px 40px;
     display: flow-root;
@@ -317,6 +316,33 @@ body::-webkit-scrollbar-thumb{
     width: 340px;
     margin-right: 5px;
     float: left;
+}
+
+.col .post_words::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, 
+    rgba(18, 53, 68, 0) 15%, 
+    rgba(18, 53, 68, 0.64) 40%,
+    rgba(18, 53, 68, 0.64) 60%,
+    rgba(18, 53, 68, 0) 90%);
+    animation: changeColor 2s ease infinite alternate;
+    animation-delay: var(--delay_time, 0s);
+    border: 2px solid white;
+    box-sizing: border-box;
+} 
+
+@keyframes changeColor {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .col .post_info{
@@ -581,8 +607,7 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     width: 343px;
     height: 100px;
-    /*top: 953px;*/
-    bottom: -22px;
+    top: 900px;
     text-indent: 0;
     text-align: center;
     line-height: 6em;

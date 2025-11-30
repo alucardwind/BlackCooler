@@ -238,6 +238,7 @@ function postswords_decorate() {
     let posts = $('.col .post_words');
     let post_width = 0;
     let post_height = 0;
+    let delay_time = 0;
     posts.each(function () {
         post_width = $(this).outerWidth();
         post_height = $(this).outerHeight();
@@ -319,7 +320,6 @@ function postswords_decorate() {
         dat_tx.lineTo(347, 25);
         dat_tx.lineTo(332, 25);
         dat_tx.stroke();
-
         dat_tx.beginPath();
         dat_tx.lineWidth = 2;
         dat_tx.strokeStyle = "#bdde2d";
@@ -327,6 +327,16 @@ function postswords_decorate() {
         dat_tx.lineTo(325, 27);
         dat_tx.stroke();
         $(this).prepend(canvas);
+        if (delay_time < 1){
+            delay_time = Math.random() * 0.5;
+            $(this).css("--delay_time", delay_time + "s");
+            delay_time++;
+        }
+        else{
+            $(this).css("--delay_time", delay_time + "s");
+            delay_time = 0;
+        }
+        
     });
 }
 
