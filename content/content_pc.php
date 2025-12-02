@@ -50,7 +50,28 @@
 	            <?php
 	            $categories=get_categories();
 	            foreach($categories as $category) {
-		            echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . "&nbsp;" . $category->count . '</a> </li> ';
+		            echo '<li><a href="' . get_category_link( $category->term_id ) . '">';
+                    switch ($category->term_id) {
+                        default:
+                            echo '<i class="fa-solid fa-bookmark"></i>';
+                            break;
+                        case 2:
+                            echo '<i class="fa-solid fa-video"></i>';
+                            break;
+                        case 3:
+                            echo '<i class="fa-solid fa-flask"></i>';
+                            break;
+                        case 4:
+                            echo '<i class="fa-solid fa-chalkboard-user"></i>';
+                            break;
+                        case 5:
+                            echo '<i class="fa-solid fa-gamepad"></i>';
+                            break;
+                        case 6:
+                            echo '<i class="fa-solid fa-hand-spock"></i>';
+                            break;
+                    }
+                    echo "&nbsp;" . $category->name . "&nbsp;" . $category->count . '</a> </li> ';
 	            }
 	            ?>
             </ul>

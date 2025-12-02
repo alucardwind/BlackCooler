@@ -2,53 +2,54 @@
 
 /* 侧边栏登录 */
 
-.lwa{
-    margin: 0 !important;
-    padding: 10px;
-    border-right: 1px solid #344349;
-    border-left: 4px solid #a09faa;
-    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.5), rgba(18, 53, 68, 0) 65%, rgba(18, 53, 68, 0) 80%, rgba(18, 53, 68, 0.5) 100%);
-}
+/*.lwa{*/
+/*    margin: 0 !important;*/
+/*    padding: 10px;*/
+/*    border-right: 1px solid #344349;*/
+/*    border-left: 4px solid #a09faa;*/
+/*    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.5), rgba(18, 53, 68, 0) 65%, rgba(18, 53, 68, 0) 80%, rgba(18, 53, 68, 0.5) 100%);*/
+/*}*/
 
-.row .lwa{
-    border: none;
-    border-left: 3px solid black;;
-    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.68), rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.68));
-    box-sizing: border-box;
-}
+/*.row .lwa{*/
+/*    border: none;*/
+/*    border-left: 3px solid black;;*/
+/*    background-image: linear-gradient(to bottom, rgba(18, 53, 68, 0.68), rgba(18, 53, 68, 0), rgba(18, 53, 68, 0.68));*/
+/*    box-sizing: border-box;*/
+/*}*/
 
-.lwa input{
-    background: none;
-    border: 1px solid #344349;
-    padding: 5px;
-}
+/*.lwa input{*/
+/*    background: none;*/
+/*    border: 1px solid #344349;*/
+/*    padding: 5px;*/
+/*}*/
 
-#lwa_wp-submit{
-    padding: 2px 5px 2px 5px;
-}
+/*#lwa_wp-submit{*/
+/*    padding: 2px 5px 2px 5px;*/
+/*}*/
 
-.lwa-avatar{
-    border-right: 1px solid #344349;
-}
+/*.lwa-avatar{*/
+/*    border-right: 1px solid #344349;*/
+/*}*/
 
-.lwa-bones .pixelbones a{
-    font-size: 15px !important;
-    line-height: 1.8em !important;
-}
+/*.lwa-bones .pixelbones a{*/
+/*    font-size: 15px !important;*/
+/*    line-height: 1.8em !important;*/
+/*}*/
 
-.lwa-bones .pixelbones label{
-    font-size: 15px !important;
-    line-height: 1.8em !important;
-}
+/*.lwa-bones .pixelbones label{*/
+/*    font-size: 15px !important;*/
+/*    line-height: 1.8em !important;*/
+/*}*/
 
-.lwa-bones .pixelbones p a{
-    font-size: 15px !important;
-    line-height: 1.8em !important;
-}
+/*.lwa-bones .pixelbones p a{*/
+/*    font-size: 15px !important;*/
+/*    line-height: 1.8em !important;*/
+/*}*/
 
-.lwa-bones .lwa.lwa-login .lwa-form .grid-container.submit {
-    grid-template-columns: 10% 1fr !important;
-}
+/*.lwa-bones .lwa.lwa-login .lwa-form .grid-container.submit {*/
+/*    grid-template-columns: 10% 1fr !important;*/
+/*}*/
+
 
 /* 视频 */
 
