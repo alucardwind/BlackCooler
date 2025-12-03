@@ -40,7 +40,9 @@
             || !dynamic_sidebar() ) :
 
         endif;
-        get_weibo();
+        if (shortcode_exists('redonleft_weibo')){
+            echo do_shortcode('[redonleft_weibo]');
+        }
         ?>
     </ul>
 </div>

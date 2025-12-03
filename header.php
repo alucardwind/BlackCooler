@@ -1,7 +1,3 @@
-<?php
-session_start();
-require 'saetv2.ex.class.php';
-?>
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
