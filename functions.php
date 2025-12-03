@@ -2,8 +2,8 @@
 function BlackCooler_scripts() {
 	wp_enqueue_script( 'jquery-script', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.6.0', false );
 	wp_enqueue_script( 'font-awesome-script', get_template_directory_uri() . '/js/fontawesome.min.js', array(), '6.1.1', false );
-	wp_enqueue_script( 'APlayer-script', get_template_directory_uri() . '/js/APlayer.min.js', array('jquery-script'), '1.10.1', false );
-	wp_enqueue_script( 'meting-script', get_template_directory_uri() . '/js/Meting.min.js', array('jquery-script', 'APlayer-script'), '2.0.1', false );
+//	wp_enqueue_script( 'APlayer-script', get_template_directory_uri() . '/js/APlayer.min.js', array('jquery-script'), '1.10.1', false );
+//	wp_enqueue_script( 'meting-script', get_template_directory_uri() . '/js/Meting.min.js', array('jquery-script', 'APlayer-script'), '2.0.1', false );
 	wp_enqueue_script( 'control-script', get_template_directory_uri() . '/js/control.js', array('jquery-script'), '1.0.6', false );
 	wp_enqueue_script( 'decorate-script', get_template_directory_uri() . '/js/decorate.js', array('jquery-script'), '1.0.3', false );
 	wp_enqueue_script( 'footer_control-script', get_template_directory_uri() . '/js/footer_control.js', array('jquery-script', 'control-script', 'decorate-script'), '1.0.2', true );

@@ -39,4 +39,4 @@
 <div id="mobile_row2" class="mobile_row mobile_single_row">
 	<?php get_sidebar() ?>
 </div>
-<?php rol_copyright(); ?>
+<?php echo do_shortcode('[redonleft_copyright]'); ?>

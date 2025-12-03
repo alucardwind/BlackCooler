@@ -14,7 +14,7 @@
                 <p>这里所展示的是我近期很喜欢的B站视频，可以通过提交BV号变更视频</p>
             </form></li></ul></li>";
             echo "<ul id='bili_player'><li>";
-            rol_player(array('type' => 'bilibili'));
+            echo do_shortcode('[redonleft_player type="bilibili"]');
             echo $change_av;
             ?>
         <li id="aplayer_li" class="widget widget_block">

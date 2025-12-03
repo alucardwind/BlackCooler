@@ -9,7 +9,7 @@
 			<?php bloginfo('description'); ?>
 		</div>
 	</div>
-	<?php rol_copyright(); ?>
+	<?php echo do_shortcode('[redonleft_copyright]'); ?>
 </div>
 <div id="mobile_row1" class="mobile_row mobile_single_row mobile_page_row">
 	<div id="page_bar">

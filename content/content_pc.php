@@ -13,8 +13,8 @@
 	    <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
     </div>
     <?php
-    rol_player(array('type' => 'netease'));
-    rol_copyright();
+    echo do_shortcode('[redonleft_player type="netease"]');
+    echo do_shortcode('[redonleft_copyright]');
     ?>
 </div>
 <div id="col1" class="col">
