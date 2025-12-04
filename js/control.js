@@ -113,7 +113,7 @@ function change_page_width(bcw) {
 }
 
 function change_sidebar() {
-    let first_li = $('.row .widget_block');
+    let first_li = $('#sidebar .widget_block');
     if (first_li.length > 0){
         let sidebar_width = $('.row #sidebar').outerWidth();
         let li_width = Math.floor(sidebar_width / first_li.length);

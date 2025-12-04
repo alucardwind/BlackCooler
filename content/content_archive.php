@@ -13,8 +13,8 @@
 		<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu')); ?>
 	</div>
 	<?php
-	rol_player(array('type' => 'netease'));
-	rol_copyright();
+    echo do_shortcode('[redonleft_player type="netease"]');
+    echo do_shortcode('[redonleft_copyright]');
 	?>
 </div>
 <div id="col1" class="col">
@@ -49,9 +49,30 @@
 			<ul>
 				<?php
 				$categories=get_categories();
-				foreach($categories as $category) {
-					echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . "&nbsp;" . $category->count . '</a> </li> ';
-				}
+                foreach($categories as $category) {
+                    echo '<li><a href="' . get_category_link( $category->term_id ) . '">';
+                    switch ($category->term_id) {
+                        default:
+                            echo '<i class="fa-solid fa-bookmark"></i>';
+                            break;
+                        case 2:
+                            echo '<i class="fa-solid fa-video"></i>';
+                            break;
+                        case 3:
+                            echo '<i class="fa-solid fa-flask"></i>';
+                            break;
+                        case 4:
+                            echo '<i class="fa-solid fa-chalkboard-user"></i>';
+                            break;
+                        case 5:
+                            echo '<i class="fa-solid fa-gamepad"></i>';
+                            break;
+                        case 6:
+                            echo '<i class="fa-solid fa-hand-spock"></i>';
+                            break;
+                    }
+                    echo "&nbsp;" . $category->name . "&nbsp;" . $category->count . '</a> </li> ';
+                }
 				?>
 			</ul>
 		</div>
@@ -82,33 +103,44 @@
 	$con_num = 0;
 	if (have_posts()) :
 		while (have_posts()) : the_post();
-			if ($bc_post_num == 0){
-				$con_num++;
-				echo "<div id='con" . $con_num . "' class='con'>";
-			}
-			if ($_GET['ds'] == 4){
-				if ($bc_post_num == 2 || $bc_post_num == 4){
-					$con_num++;
-					echo "<div id='con" . $con_num . "' class='con'>";
-				}
-			}
-			elseif ($_GET['ds'] == 3 && $bc_post_num == 3){
-				$con_num++;
-				echo "<div id='con" . $con_num . "' class='con'>";
-			}
-			get_content();
-			if ($bc_post_num == 5){
-				echo "</div>";
-			}
-			if ($_GET['ds'] == 4){
-				if ($bc_post_num == 1 || $bc_post_num == 3){
-					echo "</div>";
-				}
-			}
-			elseif ($_GET['ds'] == 3 && $bc_post_num == 2){
-				echo "</div>";
-			}
-			$bc_post_num++;
+            if ($bc_post_num == 0){
+                $con_num++;
+                echo "<div id='con" . $con_num . "' class='con'>";
+            }
+            elseif ($_GET['ds'] == 4){
+                if ($bc_post_num == 3){
+                    $con_num++;
+                    echo "<div id='con" . $con_num . "' class='con'>";
+                }
+            }
+            elseif ($_GET['ds'] == 3){
+                if ($bc_post_num == 2 || $bc_post_num == 4){
+                    $con_num++;
+                    echo "<div id='con" . $con_num . "' class='con'>";
+                }
+            }
+            elseif ($_GET['ds'] == 2){
+                $con_num++;
+                echo "<div id='con" . $con_num . "' class='con'>";
+            }
+            get_content();
+            if ($bc_post_num == 5){
+                echo "</div>";
+            }
+            elseif ($_GET['ds'] == 4){
+                if ($bc_post_num == 2){
+                    echo "</div>";
+                }
+            }
+            elseif ($_GET['ds'] == 3){
+                if ($bc_post_num == 1 || $bc_post_num == 3){
+                    echo "</div>";
+                }
+            }
+            elseif ($_GET['ds'] == 2){
+                echo "</div>";
+            }
+            $bc_post_num++;
 		endwhile;
 	endif;
 	page_navi( array(
