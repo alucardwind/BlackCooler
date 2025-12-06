@@ -77,28 +77,25 @@
 			</ul>
 		</div>
 	</div>
+    <h2 class="pagetitle">
 	<?php
-	if (is_category()) { ?>
-		<h2 class="pagetitle"><?php printf(__('以下文章归类于 &#8216;%s&#8217;','blackcooler'), single_cat_title('', false)); ?></h2>
-		<?php /* If this is a tag archive */
-	} elseif (is_tag()) { ?>
-		<h2 class="pagetitle"><?php printf(__('Posts Tagged &#8216;%s&#8217;','blackcooler'), single_tag_title('', false)); ?></h2>
-		<?php /* If this is a daily archive */
-	} elseif (is_day()) { ?>
-		<h2 class="pagetitle"><?php printf(__('以下文章写于 %s|Daily archive page','blackcooler'), get_the_time(__('F jS, Y','blackcooler'))); ?></h2>
-		<?php /* If this is a monthly archive */
-	} elseif (is_month()) { ?>
-		<h2 class="pagetitle"><?php printf(__('以下文章写于 %s|Monthly archive page','blackcooler'), get_the_time(__('F, Y','blackcooler'))); ?></h2>
-		<?php /* If this is a yearly archive */
-	} elseif (is_year()) { ?>
-		<h2 class="pagetitle"><?php printf(__('以下文章写于 %s|Yearly archive page','blackcooler'), get_the_time(__('Y','blackcooler'))); ?></h2>
-		<?php /* If this is an author archive */
-	} elseif (is_author()) { ?>
-		<h2 class="pagetitle"><?php _e('Author Archive','blackcooler'); ?></h2>
-		<?php /* If this is a paged archive */
-	} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-		<h2 class="pagetitle"><?php _e('Blog Archives','blackcooler'); ?></h2>
-	<?php }
+	if (is_category()) {
+        printf(__('以下文章归类于 &#8216;%s&#8217;','blackcooler'), single_cat_title('', false));
+	} elseif (is_tag()) {
+        printf(__('Posts Tagged &#8216;%s&#8217;','blackcooler'), single_tag_title('', false));
+	} elseif (is_day()) {
+        printf(__('以下文章写于 %s|Daily archive page','blackcooler'), get_the_time(__('F jS, Y','blackcooler')));
+	} elseif (is_month()) {
+        printf(__('以下文章写于 %s|Monthly archive page','blackcooler'), get_the_time(__('F, Y','blackcooler')));
+	} elseif (is_year()) {
+        printf(__('以下文章写于 %s|Yearly archive page','blackcooler'), get_the_time(__('Y','blackcooler')));
+	} elseif (is_author()) {
+        _e('Author Archive','blackcooler');
+	} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
+        _e('Blog Archives','blackcooler'); 
+    }?>
+    </h2>
+	<?php
 	$bc_post_num = 0;
 	$con_num = 0;
 	if (have_posts()) :
