@@ -166,6 +166,7 @@
 
 .weibo_text{
     text-align: left;
+    word-wrap: break-word;
 }
 
 .weibo_user{
