@@ -235,8 +235,8 @@ function fix_code() {
     }
     block_code.each(function () {
         let code = $(this).find('code');
-        let code_height = code.height();
-        let num = code_height / 18;
+        let code_height = code.outerHeight();
+        let num = Math.ceil(code_height / 25);
         let ul_node = document.createElement('ul');
         ul_node.setAttribute('class', 'code_list_num');
         for(let ii = 1; ii <= num; ii++){
