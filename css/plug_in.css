@@ -180,6 +180,7 @@
     border-top: 1px solid #344349;
     border-left: 1px solid #344349;
     padding: 0 10px 10px 10px;
+    line-break: anywhere;
 }
 
 /* page nav */
