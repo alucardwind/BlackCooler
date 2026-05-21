@@ -95,51 +95,16 @@
         _e('Blog Archives','blackcooler'); 
     }?>
     </h2>
+    <div class="con">
 	<?php
-	$bc_post_num = 0;
-	$con_num = 0;
-	if (have_posts()) :
-		while (have_posts()) : the_post();
-            if ($bc_post_num == 0){
-                $con_num++;
-                echo "<div id='con" . $con_num . "' class='con'>";
-            }
-            elseif ($_GET['ds'] == 4){
-                if ($bc_post_num == 3){
-                    $con_num++;
-                    echo "<div id='con" . $con_num . "' class='con'>";
-                }
-            }
-            elseif ($_GET['ds'] == 3){
-                if ($bc_post_num == 2 || $bc_post_num == 4){
-                    $con_num++;
-                    echo "<div id='con" . $con_num . "' class='con'>";
-                }
-            }
-            elseif ($_GET['ds'] == 2){
-                $con_num++;
-                echo "<div id='con" . $con_num . "' class='con'>";
-            }
+    if (have_posts()) :
+        while (have_posts()) : the_post();
             get_content();
-            if ($bc_post_num == 5){
-                echo "</div>";
-            }
-            elseif ($_GET['ds'] == 4){
-                if ($bc_post_num == 2){
-                    echo "</div>";
-                }
-            }
-            elseif ($_GET['ds'] == 3){
-                if ($bc_post_num == 1 || $bc_post_num == 3){
-                    echo "</div>";
-                }
-            }
-            elseif ($_GET['ds'] == 2){
-                echo "</div>";
-            }
-            $bc_post_num++;
-		endwhile;
-	endif;
+        endwhile;
+    endif;
+    ?>
+    </div>
+    <?php
 	page_navi( array(
 		'items'        => 7,
 		'prev_label'   => '上一页',

@@ -46,13 +46,10 @@ body::-webkit-scrollbar-thumb{
 }
 
 #page{
+    display: flex;
+    max-width: 1701px;
     margin: 20px auto 20px auto;
-    width: max-content;
-    display: flow-root;
-}
-
-.col{
-    float: left;
+    box-sizing: border-box;
 }
 
 /* 标题区域样式 */
@@ -206,6 +203,9 @@ body::-webkit-scrollbar-thumb{
 
 #col2{
     padding-left: 5px;
+    flex: 1;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .col #col2_top{
@@ -278,9 +278,12 @@ body::-webkit-scrollbar-thumb{
     line-height: 50px;
 }
 
-.col .con{
-    /*float: left;*/
-    width: max-content;
+.con{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    min-width: 402px;
+    max-width: 1216px;
 }
 
 .col #con1{
@@ -314,8 +317,6 @@ body::-webkit-scrollbar-thumb{
     max-height: var(--post_height);
     overflow: hidden;
     width: 340px;
-    margin-right: 5px;
-    float: left;
 }
 
 .col .post_words::before{

@@ -77,59 +77,18 @@
             </ul>
         </div>
     </div>
+    <div class="con">
+        <?php
+        if (have_posts()) :
+            while (have_posts()) : the_post();
+                if (!is_sticky()){
+                    get_content();
+                }
+            endwhile;
+        endif;
+        ?>
+    </div>
     <?php
-    //排除置顶文章显示，置顶文章将显示在最下面
-//    $sticky = get_option( 'sticky_posts' );
-//    $args = array(
-//        'post__not_in' => $sticky,//排除置顶文章，不输出
-//    );
-//    query_posts( $args );
-    $bc_post_num = 0;
-    $con_num = 0;
-    if (have_posts()) :
-        while (have_posts()) : the_post();
-            if (!is_sticky()){
-                if ($bc_post_num == 0){
-                    $con_num++;
-                    echo "<div id='con" . $con_num . "' class='con'>";
-                }
-                elseif ($_GET['ds'] == 4){
-                    if ($bc_post_num == 3){
-                        $con_num++;
-                        echo "<div id='con" . $con_num . "' class='con'>";
-                    }
-                }
-                elseif ($_GET['ds'] == 3){
-                    if ($bc_post_num == 2 || $bc_post_num == 4){
-	                    $con_num++;
-	                    echo "<div id='con" . $con_num . "' class='con'>";
-                    }
-                }
-                elseif ($_GET['ds'] == 2){
-                    $con_num++;
-                    echo "<div id='con" . $con_num . "' class='con'>";
-                }
-                get_content();
-                if ($bc_post_num == 5){
-                    echo "</div>";
-                }
-                elseif ($_GET['ds'] == 4){
-                    if ($bc_post_num == 2){
-                        echo "</div>";
-                    }
-                }
-                elseif ($_GET['ds'] == 3){
-                    if ($bc_post_num == 1 || $bc_post_num == 3){
-	                    echo "</div>";
-                    }
-                }
-                elseif ($_GET['ds'] == 2){
-                    echo "</div>";
-                }
-                $bc_post_num++;
-            }
-        endwhile;
-    endif;
     page_navi( array(
 	    'items'        => 7,
 	    'prev_label'   => '上一页',
