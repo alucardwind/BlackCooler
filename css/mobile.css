@@ -6,6 +6,10 @@ body{
     --mobile_post_height: 300px;
 }
 
+#page{
+    flex-direction: column;
+}
+
 .mobile_row{
     padding: 0 10px 10px 10px;
     display: flow-root;

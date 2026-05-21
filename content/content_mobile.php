@@ -54,4 +54,7 @@
 <div id="mobile_row2" class="mobile_row">
 	<?php get_sidebar() ?>
 </div>
-<?php echo do_shortcode('[redonleft_copyright]'); ?>
+<?php
+wp_enqueue_style( 'mobile-css',get_template_directory_uri() . '/css/mobile.css', array(), '1.0.7', 'all');
+echo do_shortcode('[redonleft_copyright]');
+?>
